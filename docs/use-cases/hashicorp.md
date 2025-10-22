@@ -5,6 +5,8 @@ description: AccuKnox helps organizations secure HashiCorp Vault by preventing r
 
 HashiCorp Vault helps organizations reduce the risk of breaches and data exposure with identity-based security automation and encryption as a service. When HashiCorp Vault is deployed in the Kubernetes cluster, Customer secrets are kept in a persistent volume mounted in a vault-\* stateful sets/pods
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/jZ_T6g6fBFg" frameborder="0" allowfullscreen></iframe>
+
 Usually on /bin/vault accesses this volume mount points to get the secrets stored. If any ransomware attacker gets access to these volume mount points then the secrets can be accessed by them.
 
 ![hashicorp-vaullt-hardening-accuknox](images/vault-1.png)

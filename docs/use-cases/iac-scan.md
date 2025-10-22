@@ -23,6 +23,8 @@ Integrate **AccuKnox IaC Scanner** into your CI/CD pipeline to identify and fix 
 
 - **GitHub Actions** -- CI/CD platform (similar process for GitLab CI, Jenkins, etc.)
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/fzOPhVYJdZQ" frameborder="0" allowfullscreen></iframe>
+
 ## Steps
 
 ### 1. Terraform Setup

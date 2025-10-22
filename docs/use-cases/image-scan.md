@@ -9,6 +9,9 @@ With advent of digital transformation, there has been a significant increase in 
 
 AccuKnox can secure containers by scanning container images, monitoring code in repositories and registries and evaluating it against security best practices using auto-recommended hardening policies as a part of continuous integration and continuous delivery workflows. We can secure both managed and unmanaged cluster, public and private cloud hosted workloads as well.
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/5WcUJUe8oRc" frameborder="0" allowfullscreen></iframe>
+
+
 Lets understand this by an example use-case - **Container Image scanning**
 
 - User can add docker hub, ECR registries by navigating to _Issues→Registryscan_. In the screen click **Add Registry** option

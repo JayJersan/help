@@ -29,6 +29,9 @@ description: A list of use cases for AWS cloud security with AccuKnox CSPM to en
 
 ---
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/xLZH7XTEDig" frameborder="0" allowfullscreen></iframe>
+
+
 AccuKnox's Cloud Security Posture Management (CSPM) enhances the security of AWS cloud environments by continuously monitoring for misconfigurations and compliance issues. It provides actionable insights to mitigate risks in real-time, ensuring a secure and compliant cloud infrastructure. By addressing vulnerabilities proactively, organizations can maintain robust cloud security and meet regulatory requirements efficiently.
 
 ## **Why Use AccuKnox CSPM for AWS?**
