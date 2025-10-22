@@ -6,6 +6,7 @@ description: Protect against cryptominers with AccuKnox by blocking mining execu
 # Cryptojacking
 
 Cryptojacking, the unauthorized use of someone else’s computing resources for cryptocurrency mining, is a silent but rapidly growing menace. Cryptocurrency mining steals the resources of infected machines, significantly affecting their performance and increasing the wear and tear of hardware. The mining also leads to other costs, like increased power consumption or resource consumption on the cloud.
+<iframe width="620" height="315" src="https://www.youtube.com/embed/O9OPDzF8Tak" frameborder="0" allowfullscreen></iframe>
 
 To showcase a cryptojacking attack, the Kubernetes Goat environment is used(<a href="https://github.com/madhuakula/kubernetes-goat?tab=readme-ov-file#-setting-up-kubernetes-goat", target=_blank>Kubernetes Goat Setup</a>). The Health Check deployment in Kubernetes Goat has a command injection vulnerability which allows executing commands inside the container by prefixing ```;```
 

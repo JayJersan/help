@@ -9,6 +9,8 @@ This guide demonstrates how to integrate AccuKnox's container scanning into a CI
 
 By embedding AccuKnox container scans in your DevSecOps workflows, security validation becomes an automated gatekeeper, enabling early detection of vulnerabilities, rapid remediation, and compliance with security best practices.
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/9gsareg-AAw" frameborder="0" allowfullscreen></iframe>
+
 ## Scenario
 
 Imagine a development team building a Node.js web application using an outdated base image (`node:18-alpine`). This image includes multiple known vulnerabilities. Without scanning, the image is pushed to production, exposing the system to exploitation. By integrating AccuKnox scanning into the CI/CD pipeline, these risks can be identified and blocked before deployment.
@@ -22,6 +24,9 @@ This guide shows how to:
 - Automate the scanning process for every code push or pull request.
 - View scan results in the AccuKnox SaaS dashboard.
 - Remediate vulnerabilities and verify fixes.
+
+<iframe width="620" height="315" src="https://www.youtube.com/embed/Fzqzf796flI" frameborder="0" allowfullscreen></iframe>
+
 
 ## Steps Overview
 

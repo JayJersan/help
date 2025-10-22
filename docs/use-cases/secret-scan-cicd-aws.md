@@ -5,6 +5,9 @@ This guide shows how to integrate **AccuKnox Secret Scanning** into GitHub Actio
 
 🔗 **Check it out on GitHub Marketplace:** [**AccuKnox Secret Scanner**](https://github.com/marketplace/actions/accuknox-secret-scan "https://github.com/marketplace/actions/accuknox-secret-scan")
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/Zb8M1L_2IUs" frameborder="0" allowfullscreen></iframe>
+
+
 ## Scenario: AWS S3 Keys Committed to GitHub → $45,000 Loss
 
 An engineering team mistakenly committed AWS S3 access keys into their GitHub repository.

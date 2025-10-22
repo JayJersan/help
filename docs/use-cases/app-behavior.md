@@ -11,7 +11,9 @@ Zero-Trust security model is such that it advocates for deny by default and only
 
 - restrict what processes can be spawned within the pod
 
-- restrict the capabilities that can be used by the processes within the pod
+- restrict the capabilities that can be used by the processes within the pod.
+
+<iframe width="620" height="315" src="https://www.youtube.com/embed/HpCt-AlbxGU" frameborder="0" allowfullscreen></iframe>
 
 Lets understand this by following use-case example - **Auditing Application Behavior of MySQL application**
 

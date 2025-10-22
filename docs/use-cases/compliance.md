@@ -12,6 +12,8 @@ Cloud security is a dynamic landscape, with ever-evolving threats and regulatory
 
 This is where AccuKnox’s CSPM shines. There are over 30 new compliance programs, From healthcare to finance, retail to government, CSPM covers a wide range of industry-specific regulations, ensuring that your cloud environment meets the necessary security standards.
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/oB4BamxpPts" frameborder="0" allowfullscreen></iframe>
+
 ## View your compliance posture
 
 View a high-level overview of your compliance posture for each framework on the Cloud Asset Summary page.

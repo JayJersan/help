@@ -9,6 +9,8 @@ This guide demonstrates how to integrate **AccuKnox's DAST (Dynamic Application 
 
 🔗 **Check it out on GitHub Marketplace:** [**AccuKnox DAST Scanner**](https://github.com/marketplace/actions/accuknox-dast "https://github.com/marketplace/actions/accuknox-dast")
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/IEfFUf96s6U" frameborder="0" allowfullscreen></iframe>
+
 ## Scenario: Real-World Attack Example
 
 Imagine an attacker exploiting an XSS vulnerability on a live application. Our simulation will target a test environment using <http://testphp.vulnweb.com/>, a deliberately vulnerable web application. An attacker injects a malicious script payload (`<script>alert('XSS')</script>`) into a user input field, causing an unsuspecting visitor's browser to execute arbitrary JavaScript.

@@ -4,6 +4,9 @@ In this guide, we'll walk through integrating **Opengrep** for Static Applicatio
 
 🔗 **Check it out on GitHub Marketplace:** [**AccuKnox-Opengrep SAST Scanner**](https://github.com/marketplace/actions/accuknox-sast-opengrep "https://github.com/marketplace/actions/accuknox-sast-opengrep")
 
+
+<iframe width="620" height="315" src="https://www.youtube.com/embed/ckqZ-vnHq-4" frameborder="0" allowfullscreen></iframe>
+
 ## Scenario
 
 You are maintaining a Python application, and your CI/CD pipeline automatically deploys changes to your application. You want to ensure that your code is checked for security vulnerabilities, especially **SQL Injection** attacks, which can compromise your application and data.

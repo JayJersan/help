@@ -5,6 +5,9 @@ description: Learn how to onboard your application with AccuKnox LLM Defense usi
 
 ## Steps to Get Started
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l_RCQosnNJk" frameborder="0" allowfullscreen></iframe>
+
+
 ### **1. Add Application**
 
 Click on **"Add Application"** as shown below.
@@ -86,6 +89,3 @@ accuknox_client.scan_response(
 !!! note "Important"
     The `session_id` is used to link a prompt and its corresponding response. If you don't provide it, prompts and responses will be treated as separate findings.
 
-## AI Security Use Case
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qTDQjmm8698" frameborder="0" allowfullscreen></iframe>

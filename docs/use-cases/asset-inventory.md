@@ -11,6 +11,8 @@ Once the user onboards the cloud account, the **AccuKnox CSPM tool scans** the c
 
 AccuKnox gives users the ability to view their assets from **two different perspectives**.
 
+<iframe width="620" height="315" src="https://www.youtube.com/embed/7K09AW4aH4c" frameborder="0" allowfullscreen></iframe>
+
 ## Step 1: Accessing Asset Inventory
 
 To access the **‘Asset Inventory’**, the first step is to:
