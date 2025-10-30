@@ -49,8 +49,8 @@ AccuKnox Agents can be installed using the following command as generated from t
 helm upgrade --install agents oci://public.ecr.aws/k9v9d5v2/kspm-runtime \
 -n agents --create-namespace \
 --set global.agents.enabled=true \
---set global.agents.joinToken="c83c2242-a957-4794-aac0-9c1c947dfd56" \
---set global.agents.url="dev.accuknox.com" \
+--set global.agents.joinToken="" \
+--set global.agents.url="demo.accuknox.com" \
 --set kubearmor-operator.enabled=true \
 --set kubearmor-operator.autoDeploy=true \
 --version v0.1.16
@@ -60,9 +60,9 @@ helm upgrade --install agents oci://public.ecr.aws/k9v9d5v2/kspm-runtime \
     **Always copy the latest command from the UI as the command may change based on the toggles selected.**
     In the above command, the following parameters are optional and depends on which jobs the user wants to enable:
     ```sh
-    --set global.tenantId="19" \
+    --set global.tenantId="" \
     --set global.authToken="" \
-    --set global.clusterName="TEST-B" \
+    --set global.clusterName="" \
     --set global.cronTab="08 19 * * *" \
     --set global.label="" \                         // Needed for any job to select specific workloads
     --set global.inClusterScan.enabled=true \       // Enable In-Cluster Scan job
@@ -72,8 +72,6 @@ helm upgrade --install agents oci://public.ecr.aws/k9v9d5v2/kspm-runtime \
     --set global.cis.toolConfig.platform="GKE" \    // Specify platform for CIS
     ```
     In the above command joinToken is specific to this example and it will vary based on the cluster being onboarded.
-
-
 
 ## View Onboarded Clusters
 

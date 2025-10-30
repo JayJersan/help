@@ -31,8 +31,8 @@ Give your token a name and click on generate button.
 helm upgrade --install agents oci://public.ecr.aws/k9v9d5v2/kspm-runtime \
 -n agents --create-namespace \
 --set global.agents.enabled=true \
---set global.agents.joinToken="c83c2242-a957-4794-aac0-9c1c947dfd56" \
---set global.agents.url="dev.accuknox.com" \
+--set global.agents.joinToken="" \
+--set global.agents.url="demo.accuknox.com" \
 --set kubearmor-operator.enabled=true \
 --set kubearmor-operator.autoDeploy=true \
 --set global.tenantId="19" \
