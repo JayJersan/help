@@ -41,28 +41,25 @@ helm upgrade --install agents oci://public.ecr.aws/k9v9d5v2/kspm-runtime \
 --set kubearmor-operator.enabled=true \
 --set kubearmor-operator.autoDeploy=true \
 --set global.enableJobsUrl=true \
---set global.cis.enabled=true \
---set global.agents.clusterName="<your_cluster_name>" \
---set global.cronTab="20 09 * * *" \
---set global.label="<your_label>" \
---set global.agents.accessKey="<your_access_key>" \
 --set global.kiem.enabled=true \
 --set global.riskassessment.enabled=true \
+--set global.cis.enabled=true \
+--set global.agents.clusterName="<existing-cluster-names>" \
+--set global.cronTab="20 09 * * *" \
+--set global.label="<label>" \
+--set global.tenantId="<tenant-id>" \
+--set global.agents.accessKey="<access-key>" \
 --version v0.1.16
 ```
 
 !!! info "Note"
-    Ensure the following when using the command:
-      - `--version v0.1.16` (minimum) for access key onboarding.
-      - `--set global.label` is required.
-      - Provide the generated access key via `--set global.agents.accessKey="<your_access_key>"`.
-      - Specify `--set global.cronTab` to set the cron schedule.
+    - Ensure the following when using the command:
+        - `--version v0.1.16` (minimum) for access key onboarding.
+        - `--set global.label` is required.
+        - Provide the generated access key via `--set global.agents.accessKey="<your_access_key>"`.
+        - Specify `--set global.cronTab` to set the cron schedule.
+    - In the commands above, substitute `--set clusterName` with the desired cluster name, and replace the ```<your_access_key>``` with the **Access Keys** generated from UI. Adjust the URLs if required
 
-!!! info "Note"
-    In the commands above, substitute **--set clusterName** with the desired cluster name, and replace the ```<token>``` with the **Access Keys** generated from UI. Adjust the URLs if required
-
-!!! info "Note"
-    Please check for the value of --version "v0.0.0" from the UI steps of cluster onboarding to make sure you are using the latest image tags
 
 #### Output
 
