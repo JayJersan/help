@@ -274,6 +274,7 @@ nav:
         - "Overview": "integrations/cicd-overview.md"
         - "Azure DevOps":
           - "Overview": "integrations/azure-overview.md"
+          - "Pipeline Script": "integrations/azure-pipeline-script.md"
           - "SAST": "integrations/azure-sast.md"
           - "SQ-SAST": "integrations/azure-sqsast.md"
           - "Container Image Scan": "integrations/azure-container-scan.md"
