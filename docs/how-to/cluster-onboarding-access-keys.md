@@ -17,76 +17,52 @@ Streamlining cluster onboarding is made easy with access keys, allowing users to
 
 4. Access Key (See how to [create](https://help.accuknox.com/how-to/create-access-keys/ "https://help.accuknox.com/how-to/create-access-keys/"))
 
+
+## AccuKnox Agents
+
+The AccuKnox Agent is a Kubernetes operator that deploys and manages the agents required to onboard a cluster to AccuKnox CNAPP:
+
+- Feeder service — collects KubeArmor feeds.
+- Shared-informer-agent — gathers cluster metadata (nodes, pods, namespaces).
+- Policy-enforcement-agent — applies labels and enforces policies.
+- Discovery Engine — analyzes workloads and auto-discovers least‑permissive policy sets using KubeArmor visibility.
+
+The operator also manages resource limits and automatically scales agents when cluster size changes.
+
 ## Onboarding
 
 In the case of the Access key onboarding method, the User can directly onboard the VMs from the CLI, To Onboard a new cluster follow the below steps:
 
-### Step1: Install KubeArmor
-
 ```cmd
-curl -sfL http://get.kubearmor.io/ | sudo sh -s -- -b /usr/local/bin
-karmor install
+helm upgrade --install agents oci://public.ecr.aws/k9v9d5v2/kspm-runtime \
+-n agents --create-namespace \
+--set global.agents.enabled=true \
+--set global.agents.url="demo.accuknox.com" \
+--set kubearmor-operator.enabled=true \
+--set kubearmor-operator.autoDeploy=true \
+--set global.enableJobsUrl=true \
+--set global.cis.enabled=true \
+--set global.agents.clusterName="<your_cluster_name>" \
+--set global.cronTab="20 09 * * *" \
+--set global.label="<your_label>" \
+--set global.agents.accessKey="<your_access_key>" \
+--set global.kiem.enabled=true \
+--set global.riskassessment.enabled=true \
+--version v0.1.16
 ```
 
-Output:
-
-```cmd
-kubearmor/kubearmor-client info checking GitHub for latest tag
-kubearmor/kubearmor-client info found version: 1.3.0 for v1.3.0/linux/amd64
-kubearmor/kubearmor-client info installed /usr/local/bin/karmor
-kubearmor/kubearmor-client info karmor is installed in /usr/local/bin
-kubearmor/kubearmor-client info invoke /usr/local/bin/karmor or move karmor to your desired PATH
-
-$ karmor install
-🛡       Installed helm release : kubearmor-operator
-😄      KubeArmorConfig created
-⌚️     This may take a couple of minutes
-🥳      KubeArmor Snitch Deployed!
-🥳      KubeArmor Daemonset Deployed!
-🥳      Done Checking , ALL Services are running!
-⌚️     Execution Time : 58.615464051s
-
-🔧      Verifying KubeArmor functionality (this may take upto a minute)...
-
-        🛡️      Your Cluster is Armored Up!
-```
-
-### Step2: Install AccuKnox Agents
-
-**AccuKnox-Agents:**
-
-The AccuKnox Agent is a K8s operator that installs the following agents:
-
-- Feeder service: It collects KubeArmor feeds.
-
-- Shared-informer-agent: This agent authenticates with your cluster and collects information regarding entities like nodes, pods, and namespaces.
-
-- Policy-enforcement-agent: This agent authenticates with your cluster and enforces labels and policies.
-
-- Discovery Engine: Discovery Engine discovers the security posture for your workloads and auto-discovers the policy set required to put the workload in least-permissive mode. The engine leverages the rich visibility provided by KubeArmor to auto-discover systems and network security postures.
-
-The agent-operator also manages the agents' resource limits. The operator is in charge of spawning the agents based on the size of the cluster. If the cluster size changes, i.e., new nodes are added or existing nodes are deleted, then the operator scales up or down the resources accordingly.
-
-AccuKnox Agents can be installed using the following command:
-
-```cmd
-helm upgrade --install agents oci://registry-1.docker.io/accuknox/accuknox-agents \
-        --version "v0.5.11" \
-        --set spireHost="spire.demo.accuknox.com" \
-        --set ppsHost="pps.demo.accuknox.com" \
-        --set knoxGateway="knox-gw.demo.accuknox.com:3000" \
-        --set tokenURL="cwpp.demo.accuknox.com" \
-        --set clusterName="accuknoxcluster" \
-        --set accessKey="<token>" \
-        -n accuknox-agents --create-namespace
-```
+!!! info "Note"
+    Ensure the following when using the command:
+      - `--version v0.1.16` (minimum) for access key onboarding.
+      - `--set global.label` is required.
+      - Provide the generated access key via `--set global.agents.accessKey="<your_access_key>"`.
+      - Specify `--set global.cronTab` to set the cron schedule.
 
 !!! info "Note"
     In the commands above, substitute **--set clusterName** with the desired cluster name, and replace the ```<token>``` with the **Access Keys** generated from UI. Adjust the URLs if required
 
 !!! info "Note"
     Please check for the value of --version "v0.0.0" from the UI steps of cluster onboarding to make sure you are using the latest image tags
-
 
 #### Output
 
