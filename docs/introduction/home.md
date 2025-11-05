@@ -744,7 +744,7 @@ line-height: normal;
     <img src="../cards/aiml-security.svg" alt="AI/ML Security" style="color: #000025">
     <h3 class="home-card-heading">AI/ML Security</h3>
     <p>The AI-SPM tool identifies cloud misconfigurations with continuous monitoring and real-time intelligence for AI/ML models.</p>
-    <a href="/use-cases/jupyter-notebook/" target="_blank">LEARN MORE <img src="../cards/arrow.svg" style="width: 1rem; margin-bottom:-5px; color: #000025;"></a>
+    <a href="/use-cases/aiml-usecases/" target="_blank">LEARN MORE <img src="../cards/arrow.svg" style="width: 1rem; margin-bottom:-5px; color: #000025;"></a>
   </div>
 
  <div class="card" style="position: relative;">
