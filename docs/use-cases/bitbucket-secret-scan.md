@@ -31,8 +31,6 @@ To integrate AccuKnox Secret Scanning, ensure you have:
 
     - **ACCUKNOX_TOKEN**: Your AccuKnox API token.
 
-    - **ACCUKNOX_TENANT**: Your AccuKnox tenant ID.
-
     - **ACCUKNOX_ENDPOINT**: Your AccuKnox API endpoint.
 
     - **ACCUKNOX_LABEL**: Label for scan results.
@@ -48,12 +46,11 @@ pipelines:
       - step:
           name: AccuKnox Secret Scan
           script:
-            - pipe: accu-knox/scan:1.0.1
+            - pipe: accu-knox/scan:2.1.0
               variables:
                 SCAN_TYPE: SECRET
                 INPUT_SOFT_FAIL: "true"
                 ACCUKNOX_TOKEN: ${ACCUKNOX_TOKEN}
-                ACCUKNOX_TENANT: ${ACCUKNOX_TENANT}
                 ACCUKNOX_ENDPOINT: ${ACCUKNOX_ENDPOINT}
                 ACCUKNOX_LABEL: ${ACCUKNOX_LABEL}
 ```

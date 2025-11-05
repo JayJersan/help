@@ -24,17 +24,15 @@ This guide explains how to integrate AccuKnox into your Bitbucket Pipelines to e
 
 1. **ACCUKNOX_TOKEN**: AccuKnox API token for authorization.
 
-2. **ACCUKNOX_TENANT**: Your AccuKnox tenant ID.
+2. **ACCUKNOX_ENDPOINT**: The AccuKnox API URL (e.g., [cspm.demo.accuknox.com](http://cspm.demo.accuknox.com/ "http://cspm.demo.accuknox.com")).
 
-3. **ACCUKNOX_ENDPOINT**: The AccuKnox API URL (e.g., [cspm.demo.accuknox.com](http://cspm.demo.accuknox.com/ "http://cspm.demo.accuknox.com")).
+3. **ACCUKNOX_LABEL**: The label for your scan.
 
-4. **ACCUKNOX_LABEL**: The label for your scan.
+4. **SONAR_TOKEN**: Your SonarQube API token.
 
-5. **SONAR_TOKEN**: Your SonarQube API token.
+5. **SONAR_HOST_URL**: The URL of your SonarQube server.
 
-6. **SONAR_HOST_URL**: The URL of your SonarQube server.
-
-7. **SONAR_PROJECT_KEY**: The project key for your SonarQube project.
+6. **SONAR_PROJECT_KEY**: The project key for your SonarQube project.
 
 **Step 3:** Configure Bitbucket Pipeline
 
@@ -46,7 +44,6 @@ This guide explains how to integrate AccuKnox into your Bitbucket Pipelines to e
 | `SONAR_ORGANIZATION_ID`| Required only for SonarQube Cloud users.                                   | `""`                   |
 | `SKIP_SONAR_SCAN`      | Skip SonarQube scan, for advanced users. Value should be boolean.          | `false` (boolean)      |
 | `SOFT_FAIL`            | Do not return an error code if there are failed checks.                    | `true` (boolean)       |
-| `ACCUKNOX_TENANT`      | The ID of the tenant associated with the CSPM panel.                       | N/A (Required)         |
 | `ACCUKNOX_ENDPOINT`    | The URL of the CSPM panel to push the scan results to.                     | N/A (Required)         |
 | `ACCUKNOX_LABEL`       | The label created in AccuKnox SaaS for associating scan results.           | N/A (Required)         |
 | `ACCUKNOX_TOKEN`       | The token for authenticating with the CSPM panel.                          | N/A (Required)         |
@@ -65,7 +62,7 @@ pipelines:
     - step:
         name: AccuKnox SAST Scan
         script:
-          - pipe: accu-knox/scan:2.0.0
+          - pipe: accu-knox/scan:2.1.0
             variables:
               SCAN_TYPE: SQ_SAST
               SKIP_SONAR_SCAN: "false"
@@ -73,7 +70,6 @@ pipelines:
               SONAR_HOST_URL: ${SONAR_HOST_URL}
               SONAR_PROJECT_KEY: ${SONAR_PROJECT_KEY}
               ACCUKNOX_TOKEN: ${ACCUKNOX_TOKEN}
-              ACCUKNOX_TENANT: ${ACCUKNOX_TENANT}
               ACCUKNOX_ENDPOINT: ${ACCUKNOX_ENDPOINT}
               ACCUKNOX_LABEL: ${ACCUKNOX_LABEL}
 ```
