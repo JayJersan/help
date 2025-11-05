@@ -31,8 +31,6 @@ To integrate AccuKnox Secret Scanning, ensure you have:
 
     - **ACCUKNOX_TOKEN**: Your AccuKnox API token.
 
-    - **ACCUKNOX_TENANT**: Your AccuKnox tenant ID.
-
     - **ACCUKNOX_ENDPOINT**: Your AccuKnox API endpoint.
 
     - **ACCUKNOX_LABEL**: Label for scan results.
@@ -47,7 +45,6 @@ To integrate AccuKnox Secret Scanning, ensure you have:
 | `ADDITIONAL_ARGUMENTS`  | Extra parameters for secret scanning.                                                | `""`                   |
 | `SOFT_FAIL`             | Do not return an error code if secrets are found.                                    | `true`                 |
 | `ACCUKNOX_TOKEN`        | The token for authenticating with the CSPM panel.                                    | N/A (Required)         |
-| `ACCUKNOX_TENANT`       | The ID of the tenant associated with the CSPM panel.                                 | N/A (Required)         |
 | `ACCUKNOX_ENDPOINT`     | The URL of the CSPM panel to push the scan results to.                               | N/A (Required)         |
 | `ACCUKNOX_LABEL`        | The label created in AccuKnox SaaS for associating scan results.                     | N/A (Required)         |
 
@@ -60,12 +57,11 @@ pipelines:
     - step:
         name: AccuKnox Secret Scan
         script:
-          - pipe: accu-knox/scan:2.0.0
+          - pipe: accu-knox/scan:2.1.0
             variables:
               SCAN_TYPE: SECRET
               SOFT_FAIL: "true"
               ACCUKNOX_TOKEN: ${ACCUKNOX_TOKEN}
-              ACCUKNOX_TENANT: ${ACCUKNOX_TENANT}
               ACCUKNOX_ENDPOINT: ${ACCUKNOX_ENDPOINT}
               ACCUKNOX_LABEL: ${ACCUKNOX_LABEL}
 ```

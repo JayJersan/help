@@ -18,6 +18,5 @@ Here’s the table that outlines the inputs and their descriptions, along with d
 | **INPUT_SOFT_FAIL**| Do not return an error code if there are failed checks.                     | true (boolean)               |
 | **INPUT_FRAMEWORK**| Run only on a specific infrastructure (Kubernetes or Terraform).            | "" (empty, optional)         |
 | **ACCUKNOX_TOKEN** | The token for authenticating with the CSPM panel.                           | N/A (Required)               |
-| **ACCUKNOX_TENANT**| ID of the tenant associated with the CSPM panel.                            | N/A (Required)               |
 | **ACCUKNOX_ENDPOINT** | URL of the CSPM panel to push the scan results to.                       | cspm.demo.accuknox.com       |
 | **ACCUKNOX_LABEL** | Label created in AccuKnox SaaS for associating scan results.                | N/A (Required)               |

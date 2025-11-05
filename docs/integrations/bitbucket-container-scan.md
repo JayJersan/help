@@ -30,7 +30,6 @@ Log in to AccuKnox. Navigate to Settings and select Tokens to create an AccuKnox
 | **Name**             | **Description**                                                                        |
 | -------------------- | -------------------------------------------------------------------------------------- |
 | `ACCUKNOX_ENDPOINT`  | The URL of the CSPM panel to push the scan results to (e.g., `cspm.demo.accuknox.com`) |
-| `ACCUKNOX_TENANT_ID` | The ID of the tenant associated with the CSPM panel                                    |
 | `ACCUKNOX_TOKEN`     | Token for authenticating with the AccuKnox CSPM panel                                  |
 | `ACCUKNOX_LABEL`     | Label to categorize or tag the scan results                                            |
 
@@ -46,7 +45,6 @@ The label used to categorize and identify scan results in AccuKnox. [Create a ne
 | `TAG`               | The tag for the Docker image.                                                                             | N/A (**Required**)                 |
 | `SEVERITY`          | Allows selection of severity level for the scan. Options: `UNKNOWN`, `LOW`, `MEDIUM`, `HIGH`, `CRITICAL`. | `UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL` |
 | `SOFT_FAIL`         | Do not return an error code if there are failed checks.                                                   | `true`                             |
-| `ACCUKNOX_TENANT`   | The ID of the tenant associated with the CSPM panel.                                                      | N/A (**Required**)                 |
 | `ACCUKNOX_ENDPOINT` | The URL of the CSPM panel to push the scan results to.                                                    | N/A (**Required**)                 |
 | `ACCUKNOX_LABEL`    | The label created in AccuKnox SaaS for associating scan results.                                          | N/A (**Required**)                 |
 | `ACCUKNOX_TOKEN`    | The token for authenticating with the CSPM panel.                                                         | N/A (**Required**)                 |
@@ -65,14 +63,13 @@ pipelines:
           - export IMAGE_NAME="bitbucket"
           - export TAG="test"
           - docker build -t $IMAGE_NAME:$TAG .
-          - pipe: accu-knox/scan:2.0.0
+          - pipe: accu-knox/scan:2.1.0
             variables:
               SCAN_TYPE: CONTAINER
               SOFT_FAIL: "true"
               IMAGE_NAME: $IMAGE_NAME
               TAG: $TAG
               ACCUKNOX_TOKEN: ${ACCUKNOX_TOKEN}
-              ACCUKNOX_TENANT: ${ACCUKNOX_TENANT}
               ACCUKNOX_ENDPOINT: ${ACCUKNOX_ENDPOINT}
               ACCUKNOX_LABEL: ${ACCUKNOX_LABEL}
 ```
