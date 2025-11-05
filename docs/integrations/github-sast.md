@@ -100,7 +100,7 @@ jobs:
 
 **Step 1**: After the workflow completes, navigate to the AccuKnox SaaS dashboard.
 
-S**Step 2**: Go to **Issues** > **Findings** and select **Static Code Analysis Findings** to see identified vulnerabilities.
+**Step 2**: Go to **Issues** > **Findings** and select **Static Code Analysis Findings** to see identified vulnerabilities.
 
 ![image-20241122-035925.png](./images/github-sast/1.png)
 
