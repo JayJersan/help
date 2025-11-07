@@ -93,6 +93,7 @@ Permissions for AI Asset Scanning (Azure):
     - `Microsoft.MachineLearningServices/serverlessEndpoints/listKeys/action`
     - `Microsoft.Storage/storageAccounts/listKeys/action`
     - `Microsoft.MachineLearningServices/workspaces/batchEndpoints/score/action`
-
+    - `Microsoft.CognitiveServices/accounts/listKeys/action`
+    - `Microsoft.CognitiveServices/accounts/deployments/read`
 - - -
 [SCHEDULE DEMO](https://www.accuknox.com/contact-us){ .md-button .md-button--primary }
