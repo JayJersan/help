@@ -91,9 +91,7 @@ Permissions for AI Asset Scanning (Azure):
 - **Create a custom role** with the following actions:
     - `Microsoft.MachineLearningServices/workspaces/onlineEndpoints/score/action`
     - `Microsoft.MachineLearningServices/serverlessEndpoints/listKeys/action`
-    - `Microsoft.Storage/storageAccounts/listKeys/action`
-    - `Microsoft.MachineLearningServices/workspaces/batchEndpoints/score/action`
+    - `Microsoft.MachineLearningServices/workspaces/listStorageAccountKeys/action`
     - `Microsoft.CognitiveServices/accounts/listKeys/action`
     - `Microsoft.CognitiveServices/accounts/deployments/read`
-- - -
-[SCHEDULE DEMO](https://www.accuknox.com/contact-us){ .md-button .md-button--primary }
+
