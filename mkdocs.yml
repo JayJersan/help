@@ -255,6 +255,7 @@ nav:
       - "Configure Custom Report": "how-to/custom-reports.md"
       - "Summarized Custom Report": "how-to/summarized-custom-reports.md"
     - "Signup/Login via SSO": "how-to/sso.md"
+    - "Audit Trail Logs": "getting-started/audit-trail-logs.md"
     - "knoxctl":
       - "Overview": "knoxctl/index.md"
       - "Configuration": "knoxctl/knoxctl-config.md"
