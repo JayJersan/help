@@ -36,9 +36,10 @@ To set up this integration, you need to coordinate with your ServiceNow administ
 
     - **Secret**: The current password of the instance.
 
-![servicenow-integration-accuknox](images/servicenow/service-now-1.png)
+![servicenow-integration-accuknox](images/servicenow/2.png)
 
 - Click on the ServiceNow ticketing backend
+![servicenow-integration-accuknox](images/servicenow/1.png)
 
 - Click on Add Configuration and enter the following details:
 
@@ -49,7 +50,5 @@ To set up this integration, you need to coordinate with your ServiceNow administ
     - **Issue Type**: You can choose from the dropdown.
 
     - Fill the priority mapping according to your choice and press **Save**.
-
-![servicenow-integration-accuknox](images/servicenow/service-now-3.png)
 
 You can now create tickets on ServiceNow through the ticketing configuration.
