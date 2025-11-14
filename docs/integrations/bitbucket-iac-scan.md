@@ -22,11 +22,9 @@ This guide explains how to integrate Infrastructure as Code (IaC) security into 
 
 1. **ACCUKNOX_TOKEN**: AccuKnox API token for authorization.
 
-2. **ACCUKNOX_TENANT**: Your AccuKnox tenant ID.
+2. **ACCUKNOX_ENDPOINT**: The AccuKnox API URL (e.g., [cspm.demo.accuknox.com](http://cspm.demo.accuknox.com/ "http://cspm.demo.accuknox.com")).
 
-3. **ACCUKNOX_ENDPOINT**: The AccuKnox API URL (e.g., [cspm.demo.accuknox.com](http://cspm.demo.accuknox.com/ "http://cspm.demo.accuknox.com")).
-
-4. **ACCUKNOX_LABEL**: The label for your scan.
+3. **ACCUKNOX_LABEL**: The label for your scan.
 
 **Step 3:** Configure Bitbucket Pipeline
 
@@ -38,7 +36,6 @@ This guide explains how to integrate Infrastructure as Code (IaC) security into 
 | `QUIET`                | Display only failed checks                                                       | `true` *(boolean)*         |
 | `FRAMEWORK`            | Run only on a specific infrastructure (e.g., Kubernetes or Terraform)            | `""` *(empty, optional)*   |
 | `SOFT_FAIL`            | Do not return an error code if there are failed checks                           | `true` *(boolean)*         |
-| `ACCUKNOX_TENANT`      | The ID of the tenant associated with the CSPM panel                              | **N/A (Required)**         |
 | `ACCUKNOX_ENDPOINT`    | The URL of the CSPM panel to push the scan results to                            | **N/A (Required)**         |
 | `ACCUKNOX_LABEL`       | The label created in AccuKnox SaaS for associating scan results                  | **N/A (Required)**         |
 | `ACCUKNOX_TOKEN`       | The token for authenticating with the CSPM panel                                 | **N/A (Required)**         |
@@ -52,13 +49,12 @@ pipelines:
     - step:
         name: AccuKnox IaC Scan
         script:
-          - pipe: accu-knox/scan:2.0.0
+          - pipe: accu-knox/scan:2.1.0
             variables:
               SCAN_TYPE: IAC
               DIRECTORY: "./"
               SOFT_FAIL: "true"
               ACCUKNOX_TOKEN: ${ACCUKNOX_TOKEN}
-              ACCUKNOX_TENANT: ${ACCUKNOX_TENANT}
               ACCUKNOX_ENDPOINT: ${ACCUKNOX_ENDPOINT}
               ACCUKNOX_LABEL: ${ACCUKNOX_LABEL}
 ```
