@@ -80,7 +80,7 @@ steps:
       repository: "$(imageRepository)"
       tags: |
         $(imageTag)
-  - task: accuknox-container-scan@1.1.1
+  - task: accuknox-container-scan@2.0.0
     inputs:
       tag: $(imageTag)
       imageName: $(imageRepository)

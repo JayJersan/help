@@ -54,7 +54,7 @@ In your Azure repo, create/update your pipeline YAML (`azure-pipelines.yml`) and
 
 ```yaml
 steps:-
-- task: accuknox-sq-sast@1
+- task: accuknox-sq-sast@2.0.0
   inputs:
     sonarQubeUrl: 'https://sonarcloud.io'
     sonarQubeToken: '$(sonarQubeToken)'

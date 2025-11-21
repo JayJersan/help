@@ -48,7 +48,7 @@ In your Azure repo, create/update your pipeline YAML (`azure-pipelines.yml`) and
 
 ```yaml
 steps:-
-- task: AccuKnox-SAST@2
+- task: AccuKnox-SAST@3.0.0
   inputs:
     accuknoxEndpoint: $(accuknoxEndpoint)
     accuknoxToken: $(accuknoxToken)

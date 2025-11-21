@@ -64,7 +64,7 @@ To demonstrate the benefits of incorporating AccuKnox DAST into an Azure DevOps 
 
 ```
 steps:
-  - task: accuknox-dast@0
+  - task: accuknox-dast@2.0.0
     inputs:
       targetURL: $(TARGET_URL)
       accuknoxEndpoint: $(ACCUKNOX_ENDPOINT)

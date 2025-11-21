@@ -52,7 +52,7 @@ Log in to AccuKnox Navigate to Settings and select Tokens to create an AccuKnox 
 Edit your Azure DevOps pipeline YAML file to include the AccuKnox IaC Scan task. Below is an example configuration:
 
 ```yaml
-- task: accuknox-iac@1.0.1
+- task: accuknox-iac@2.0.0
   inputs:
     accuknoxEndpoint: "<ACCUKNOX_ENDPOINT>"
     accuknoxToken: "<ACCUKNOX_TOKEN>"
