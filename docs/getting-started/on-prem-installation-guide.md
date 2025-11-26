@@ -197,67 +197,234 @@ update-ca-certificates
 
 ## Kubernetes Cluster
 
-Deploy K0s and initialize a cluster on the master node. Connect the worker nodes to the initialized cluster. Ensure the cluster is functional.
+Installation is currently tested on **Ubuntu 24.2**, **Debian 12**, and **RedHat 9**.
 
-### Install k0s
+### Prerequisites
 
-```bash
-wget https://github.com/k0sproject/k0sctl/releases/download/v0.19.4/k0sctl-linux-amd64
-chmod +x k0sctl-linux-amd64
-sudo mv k0sctl-linux-amd64 /usr/local/bin/k0sctl
-```
+**VM Requirements:**
 
-Bootstrap the cluster
+- 8 vCPU / 32GB Memory
+- 200GB Storage
 
-```bash
-k0sctl apply -c k0s.yaml
-```
-
-Once the cluster bootstrapping is complete, generate the kubeconfig file:
+### Install k3s
 
 ```bash
-k0sctl kubeconfig -c k0s.yaml
+cd Helm-chart
+./install_k3s.sh
 ```
 
-### Persistent Volume Provisioner/Controller
+### Air-Gapped Mode Setup
 
-Used as data storage for SQL, MongoDB, scanned artifacts and other internal application components.
+If you want to use your private/local registry as the exclusive source of images for the entire cluster, please install the `accuknox-onprem-mgr` component first.
 
-#### Longhorn Installation
+#### Required Credentials
 
-If not already available, Longhorn will be installed on the cluster.
+| Value               | Description                                      | Provider |
+|---------------------|--------------------------------------------------|----------|
+| `registry.username` | Registry User                                    | Customer |
+| `registry.password` | Registry Password                                | Customer |
+| `registry.address`  | The registry server address                      | Customer |
+| `ecr.user`          | Credential to pull images from AccuKnox registry<br>Value: `AKIA55UKWVCCBZ2YEFIY` | AccuKnox |
+| `ecr.password`      | Credential to pull images from AccuKnox registry<br>Value: `0c5UL9oHkftDRBfnrQV4Jmic/5eei4agpyxNtAkV` | AccuKnox |
 
-#### Prerequisites (Preparing Nodes)
-
-Following commands need to be run on **all** the nodes:
+#### Upload Images Using Docker
 
 ```bash
-#!/bin/bash
-apt update -y
-modprobe ceph
-modprobe rbd
-modprobe iscsi_tcp
-apt install nfs-common -y
-apt-get install open-iscsi -y
+cd airgapped-reg
+
+# Configure AWS CLI with AccuKnox provided secrets
+aws configure
+
+# Connect to AccuKnox docker registry
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 956994857092.dkr.ecr.us-east-2.amazonaws.com
+
+# Connect to airgapped registry
+docker login <registry_address>
+
+# Upload images to private registry
+./upload_images.sh <registry_address>
+
+# Upload helm charts to private registry
+./upload_helm.sh <registry.address>
+
+# Upload onboarding images to private registry
+./upload_onboarding_images.sh <registry.address>
 ```
 
-Please verify if the preflight check succeeds by following [this linked guide](https://longhorn.io/docs/1.9.0/deploy/install/#checking-prerequisites-using-longhorn-command-line-tool) before proceeding.
-
-#### Installation
+#### Upload Images Using Skopeo (Alternative Method)
 
 ```bash
-helm install longhorn . --namespace longhorn-system --create-namespace --set global.imageRegistry=<registry_address>
+skopeo --version
+
+# Configure AWS CLI with AccuKnox provided secrets
+aws configure
+
+# Connect to AccuKnox registry
+aws ecr get-login-password --region us-east-2 | skopeo login --username AWS --password-stdin 956994857092.dkr.ecr.us-east-2.amazonaws.com
+
+# Upload images to private registry
+skopeo login --username <username> --password <password> <registry.address>
+
+./skopeo_upload_image.sh <registry.address>
+./skopeo_upload_onboarding_images.sh <registry.address>
 ```
 
-### Ingress Controller
+### Air-Gapped Installation
 
-For load balancing and providing access to the application.
+To create Cert Manager, onprem-manager, and Longhorn, and update the registry URL in `override-values.yaml`:
 
-### Attach Container Registry
+```bash
+cd airgapped-reg
+./airgapped-install.sh <registry.address> <username> <password>
+```
 
-If a container registry is available, we can connect to it, otherwise a Container Registry will be deployed as per the container registry prerequisites.
+**Options:**
 
-The container registry credentials should be configured in the cluster to access the container images.
+- Use `--longhorn` flag to install Longhorn
+- Use `--cleanup` flag to cleanup generated secrets, onprem-mgr, and cert-manager
+
+### Verify Longhorn Installation
+
+Check all Longhorn pods and ensure they are running before proceeding.
+
+### Configure override-values.yaml
+
+```bash
+cd ..
+```
+
+Update the following fields in `override-values.yaml`:
+
+#### Platform Configuration
+
+```yaml
+platform: "" # k0s, openshift, rke2
+```
+
+#### Domain Configuration
+
+Replace `<your_domain.com>` with your actual domain throughout the file.
+
+#### Storage Class Configuration
+
+Use the default storageclass if deploying on k3s (`local-path`). Update the StorageClass `<storageclass>` as needed.
+
+#### NGINX Gateway Configuration
+
+**Regular method:**
+
+```yaml
+nginx-Ingress:
+  enabled: false
+```
+
+**IP-based deployment:**
+
+```yaml
+ingressGateway:
+  enabled: false
+
+nginxIngressGateway:
+  enabled: false
+  loadBalancerHost: "app.<your_domain.com>"
+```
+
+#### On-Prem Variables
+
+Verify that `onprem` variables were updated by the script:
+
+```yaml
+onprem:
+  enabled: true
+  airgapped: true
+  allowsignup: true
+  airgapped_reg: "<registry.address>"
+```
+
+### SSL Certificate Configuration
+
+We offer **three** deployment models for SSL certificates to accommodate client requirements.
+
+#### Prerequisites for Air-gapped/Private Registry Environments
+
+If the environment is air-gapped or using a private registry, set `ssl.certmanager.install` to `false`:
+
+```yaml
+ssl:
+  certmanager:
+    install: false
+```
+
+#### Prerequisites for IP-based Deployments
+
+If you are deploying with IP-based method, disable SSL:
+
+```yaml
+ssl:
+  selfsigned: false
+  customcerts: false
+```
+
+#### 1. Auto-generated Self-signed Certificate
+
+We auto-generate the needed self-signed certificates for the client. To enable this option, set the following in your `override-values.yaml`:
+
+```yaml
+ssl:
+  selfsigned: true
+  customcerts: false
+```
+
+#### 2. Certificate Signed by a Known Authority
+
+Client provides certificate signed by a known authority. To enable this option, set:
+
+```yaml
+ssl:
+  selfsigned: false
+  customcerts: true
+```
+
+#### 3. Self-signed Certificates Provided by the Customer
+
+Client provides their own self-signed certificate. To enable this option, set:
+
+```yaml
+ssl:
+  selfsigned: true
+  customcerts: true
+```
+
+### Configure override-values.yaml
+
+The AccuKnox installation package contains `override-values.yaml` file with installation-specific options:
+
+- Replace `<your_domain.com>` with your actual domain
+- Set your SSL preferences in the override values by changing the `ssl` block
+
+### Install AccuKnox Charts
+
+Run the installation script:
+
+```bash
+./install_chart.sh
+```
+
+### DNS Mapping
+
+Map worker node IPs to each of the DNS entries:
+
+- `app.<your_domain.com>`
+- `cspm.<your_domain.com>`
+- `cwpp.<your_domain.com>`
+
+Map any one of the worker node IPs to:
+
+- `app.<your_domain.com>`
+
+### Access the UI
+
+Open the UI in a browser at `https://app.<your_domain.com>` and complete sign-up.
 
 ## Jump Host
 
