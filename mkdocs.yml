@@ -233,6 +233,7 @@ nav:
       - "Quay": "how-to/quay.md"
       - "In-Cluster Scanner": "how-to/in-cluster-image-scan-helm.md"
     - "On-Premises":
+        - "Overview": "getting-started/on-prem-overview.md"
         - "On-premise Installation" : "getting-started/on-prem-installation-guide.md"
         - "Security on OpenShift": "getting-started/security-on-openshift.md"
         - "Health Monitoring":
