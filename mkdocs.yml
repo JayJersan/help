@@ -265,7 +265,7 @@ nav:
       - "Bifrost Integration": "integrations/bifrost-integration.md"
       # - "LiteLLM Prompt Firewall Integration": "integrations/litellm-prompt-firewall-integration.md"
     - "API Security":
-      - "Overview": "getting-started/api-overview.md"
+      - "Overview": "integrations/api-overview.md"
       - "Traffic Connectors":
         - "AWS API Gateway": "integrations/api-aws.md"
         # - "Nginx Server": "integrations/api-nginx-server.md"
