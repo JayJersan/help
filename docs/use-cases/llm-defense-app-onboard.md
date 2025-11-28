@@ -1,6 +1,6 @@
 ---
-title: Onboard LLM Defense App
-description: Learn how to onboard your application with AccuKnox LLM Defense using the Python SDK. This guide covers steps from application registration to scanning prompts and responses for sensitive information.
+title: Onboard Prompt Firewall App
+description: Learn how to onboard your application with AccuKnox Prompt Firewall using the Python SDK. This guide covers steps from application registration to scanning prompts and responses for sensitive information.
 ---
 
 ## Steps to Get Started

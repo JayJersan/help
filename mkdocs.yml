@@ -243,13 +243,6 @@ nav:
       - "AWS Onboarding": "getting-started/aws-cdr.md"
       - "GCP Onboarding": "getting-started/gcp-cdr.md"
       - "Azure Onboarding": "getting-started/azure-cdr.md"
-    - "API Security":
-      - "Overview": "getting-started/api-overview.md"
-      - "Traffic Connectors":
-        - "Kubernetes":
-          - "Deploy SentryFlow": "getting-started/api-k8s.md"
-          - "Istio": "getting-started/api-istio.md"
-          - "Nginx": "getting-started/api-nginx.md"
     - "Secrets Management":
       - "Overview": "getting-started/secrets-management.md"
     - "Reports":
@@ -274,6 +267,16 @@ nav:
     - "Create Labels" : "how-to/how-to-create-labels.md"
     - "Create Access Keys": "how-to/create-access-keys.md"
     - "Findings Lifecycle": "how-to/findings-lifecycle.md"
+    - "AI Security":
+      - "Bifrost Integration": "integrations/bifrost-integration.md"
+      # - "LiteLLM Prompt Firewall Integration": "integrations/litellm-prompt-firewall-integration.md"
+    - "API Security":
+      - "Overview": "getting-started/api-overview.md"
+      - "Traffic Connectors":
+        - "Kubernetes":
+          - "Deploy SentryFlow": "getting-started/api-k8s.md"
+          - "Istio": "getting-started/api-istio.md"
+          - "Nginx": "getting-started/api-nginx.md"
     - "CI/CD":
         - "Overview": "integrations/cicd-overview.md"
         - "Azure DevOps":
@@ -402,10 +405,9 @@ nav:
       - "Remediation": "getting-started/cdr-setup.md"
     - "AI/ML Security":
       - "Use Cases": "use-cases/aiml-usecases.md"
-      - "Bifrost Integration": "use-cases/bifrost-integration.md"
       - "Categories and Probes": "use-cases/subprompts-categories.md"
       - "Runtime Security":
-        - "Onboard LLM Defense App": "use-cases/llm-defense-app-onboard.md"
+        - "Onboard Prompt Firewall App": "use-cases/llm-defense-app-onboard.md"
       - "Jupyter Notebook": "use-cases/jupyter-notebook.md"
       - "ModelArmor":
         - "Overview": "use-cases/modelarmor.md"
