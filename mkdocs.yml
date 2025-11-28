@@ -178,7 +178,7 @@ nav:
       - "Host Security Playbook": "how-to/playbook-hostsec.md"
       - "Integrations Playbook" : "how-to/playbook-integrations.md"
     - "Enterprise Architecture" : "getting-started/accuknox-arch.md"
-    - "AccuKnox Agents" : "getting-started/accuknox-agents.md"
+    # - "AccuKnox Agents" : "getting-started/accuknox-agents.md"
     - "DevSecOps" : "getting-started/devsecops.md"
     - "Cloud Accounts":
       - "Overview": "how-to/high-level-onboarding.md"
