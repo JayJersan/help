@@ -1,29 +1,21 @@
 ---
-title: AccuKnox <> Bifrost Integration
-description: Guide to integrate AccuKnox LLM Defense with Bifrost using a custom Go plugin.
+title: Bifrost Integration Guide
+description: Guide to integrate AccuKnox Prompt Firewall with Bifrost using a custom Go plugin.
 ---
 
-# AccuKnox <> Bifrost Integration Guide
+# Bifrost Integration Guide
+Learn how to integrate AccuKnox Prompt Firewall with Bifrost using a custom Go plugin to monitor and filter prompts and responses via the AccuKnox API.
 
-This guide demonstrates how to integrate AccuKnox LLM Defense with Bifrost using a custom plugin written in Go.
+<p align="center">
+  <img src="https://i.ibb.co/NnW7Nwsz/Screenshot-2025-11-28-123545.png" alt="alt text" />
+</p>
 
-## Step 1: Install Dependencies
+## Step 1: Prerequisites
 
-### Clone the Bifrost Repository
+We expect you to have the `bifrost-http` binary in-place. You can download it from the [Bifrost Releases](https://github.com/maximhq/bifrost/releases).
 
-```bash
-git clone https://github.com/maximhq/bifrost.git
-cd bifrost
-```
+This integration guide uses the `bifrost-http` binary to test the configuration. You can use this config with any Bifrost deployment method.
 
-### Build the Bifrost HTTP Binary
-
-!!! info "Note"
-    For this POC we are using bifrost-http binary to test out the config. You can use this config with any Bifrost deployment method.
-
-```bash
-go build -o bifrost-http transports/bifrost-http/main.go
-```
 
 ## Step 2: Download AccuKnox Plugin
 
@@ -32,23 +24,18 @@ Download the latest AccuKnox plugin for Bifrost:
 ### Using wget
 
 ```bash
-wget https://github.com/accuknox/bifrost-poc/releases/latest/download/accuknox-plugin.so
+wget https://github.com/accuknox/bifrost-accuknox-integration/releases/latest/download/accuknox-plugin.so
 ```
 
 ### Using curl
 
 ```bash
-curl -LO https://github.com/accuknox/bifrost-poc/releases/latest/download/accuknox-plugin.so
+curl -LO https://github.com/accuknox/bifrost-accuknox-integration/releases/latest/download/accuknox-plugin.so
 ```
 
 !!! tip "Source Code"
-    The plugin source code is available at [github.com/accuknox/bifrost-poc](https://github.com/accuknox/bifrost-poc) for reference.
+    The plugin source code is available at [github.com/accuknox/bifrost-accuknox-integration](https://github.com/accuknox/bifrost-accuknox-integration) for reference.
 
-### Move the Plugin
-
-```bash
-mv accuknox-plugin.so /path/to/bifrost/
-```
 
 ## Step 3: Configure Bifrost
 
@@ -94,17 +81,17 @@ Create or update your Bifrost configuration file with the following settings:
 - **`enabled`**: Set to `true` to activate the plugin
 - **`name`**: Plugin identifier (must match the name returned by `GetName()`)
 - **`path`**: Path to the compiled `.so` file
-- **`api_key`**: Your AccuKnox LLM Defense JWT token (obtained from AccuKnox dashboard)
+- **`api_key`**: Your AccuKnox Prompt Firewall JWT token (obtained from AccuKnox dashboard)
 - **`user_info`**: Your email or username for tracking
 
-### AccuKnox API Endpoint
+<!-- ### AccuKnox API Endpoint
 
 The plugin automatically determines the AccuKnox API endpoint by decoding the JWT token's `iss` field:
 
 - **dev**: `https://cwpp.dev.accuknox.com/llm-defence/application-query`
 - **stage**: `https://cwpp.stage.accuknox.com/llm-defence/application-query`
 - **demo**: `https://cwpp.demo.accuknox.com/llm-defence/application-query`
-- **prod**: `https://cwpp.prod.accuknox.com/llm-defence/application-query`
+- **prod**: `https://cwpp.prod.accuknox.com/llm-defence/application-query` -->
 
 ### Provider Configuration
 
