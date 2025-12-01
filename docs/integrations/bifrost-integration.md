@@ -1,10 +1,10 @@
 ---
 title: Bifrost Integration Guide
-description: Guide to integrate AccuKnox Prompt Firewall with Bifrost using a custom Go plugin.
+description: Guide to integrate AccuKnox Prompt Firewall with Bifrost using a custom plugin.
 ---
 
 # Bifrost Integration Guide
-Learn how to integrate AccuKnox Prompt Firewall with Bifrost using a custom Go plugin to monitor and filter prompts and responses via the AccuKnox API.
+Learn how to integrate AccuKnox Prompt Firewall with Bifrost using a custom plugin to monitor and filter prompts and responses via the AccuKnox API.
 
 <p align="center">
   <img src="https://i.ibb.co/NnW7Nwsz/Screenshot-2025-11-28-123545.png" alt="alt text" />

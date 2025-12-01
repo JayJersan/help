@@ -10,6 +10,12 @@ hide:
 </style>
 
 ::cards:: cols=3
+- title: AI Security
+  image: ./icons/ai.svg
+  url: /integrations/ai-overview/
+- title: API Security
+  image: ./icons/api.svg
+  url: /integrations/api-overview/
 - title: CI/CD
   image: ./icons/cicd.svg
   url: /integrations/cicd-overview/

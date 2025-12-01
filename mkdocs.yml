@@ -177,10 +177,12 @@ nav:
       - "KSPM Playbook": "how-to/playbook-kspm.md"
       - "Host Security Playbook": "how-to/playbook-hostsec.md"
       - "Integrations Playbook" : "how-to/playbook-integrations.md"
-    - "Enterprise Architecture" : "getting-started/accuknox-arch.md"
-    # - "AccuKnox Agents" : "getting-started/accuknox-agents.md"
-    - "DevSecOps" : "getting-started/devsecops.md"
-    - "Cloud Accounts":
+    - "On-Premises":
+        - "Overview": "getting-started/on-prem-overview.md"
+        - "Installation Guide" : "getting-started/on-prem-installation-guide.md"
+        - "Security on OpenShift": "getting-started/security-on-openshift.md"
+        - "Health Monitoring (RINC)": "how-to/RINC.md"
+    - "Cloud Security (CSPM)":
       - "Overview": "how-to/high-level-onboarding.md"
       - "Prerequisites":
             - "AWS": "how-to/cspm-prereq-aws.md"
@@ -193,12 +195,12 @@ nav:
         - "GCP" : "how-to/gcp-onboarding.md"
         - "Oracle" : "how-to/oracle-onboarding.md"
         - "Offboard Cloud Account": "how-to/cloud-offboarding.md"
-    - "AI/ML Security":
+    - "AI/ML Security (AI-SPM)":
       - "Overview": "how-to/aiml-overview.md"
       - "AWS AI/ML Onboarding": "how-to/aiml-aws-onboard.md"
       - "Azure AI/ML Onboarding": "how-to/aiml-azure-onboard.md"
       - "GCP AI/ML Onboarding": "how-to/aiml-gcp-onboard.md"
-    - "Workloads":
+    - "Workload Security (CWPP)":
       - "Kubernetes":
         - "Onboarding Overview": "how-to/k8s-security-onboarding.md"
         - "Runtime Security Prerequisites": "getting-started/cwpp-prereq.md"
@@ -217,8 +219,9 @@ nav:
         - "WordPress-MySQL": "getting-started/wordpress-mysql.md"
         - "DVWA": "getting-started/dvwa.md"
         - "PHP-MySQL": "getting-started/php-mysql.md"
-    - "ASPM":
+    - "Application Security (ASPM)":
       - "Overview": "how-to/aspm-overview.md"
+      - "DevSecOps" : "getting-started/devsecops.md"
       - "Github IaC Scan": "how-to/github-iac-scan.md"
       - "AWS CDK IaC Scan": "how-to/aws-cdk-iac-scan.md"
     - "Container Registry":
@@ -232,25 +235,16 @@ nav:
       - "JFrog Container" : "how-to/jfrog-container.md"
       - "Quay": "how-to/quay.md"
       - "In-Cluster Scanner": "how-to/in-cluster-image-scan-helm.md"
-    - "On-Premises":
-        - "Overview": "getting-started/on-prem-overview.md"
-        - "On-premise Installation" : "getting-started/on-prem-installation-guide.md"
-        - "Security on OpenShift": "getting-started/security-on-openshift.md"
-        - "Health Monitoring":
-          - "RINC": "how-to/RINC.md"
-    - "SBOM": "getting-started/sbom.md"
     - "CDR":
       - "AWS Onboarding": "getting-started/aws-cdr.md"
       - "GCP Onboarding": "getting-started/gcp-cdr.md"
       - "Azure Onboarding": "getting-started/azure-cdr.md"
-    - "Secrets Management":
-      - "Overview": "getting-started/secrets-management.md"
+    - "SBOM": "getting-started/sbom.md"
+    - "Secrets Management": "getting-started/secrets-management.md"
     - "Reports":
       - "Configure Custom Report": "how-to/custom-reports.md"
       - "Summarized Custom Report": "how-to/summarized-custom-reports.md"
-    - "Signup/Login via SSO": "how-to/sso.md"
-    - "Audit Trail Logs": "getting-started/audit-trail-logs.md"
-    - "knoxctl":
+    - "Knoxctl":
       - "Overview": "knoxctl/index.md"
       - "Configuration": "knoxctl/knoxctl-config.md"
       - "Commands": "knoxctl/knoxctl-commands.md"
@@ -268,15 +262,19 @@ nav:
     - "Create Access Keys": "how-to/create-access-keys.md"
     - "Findings Lifecycle": "how-to/findings-lifecycle.md"
     - "AI Security":
+      - "Overview": "integrations/ai-overview.md"
       - "Bifrost Integration": "integrations/bifrost-integration.md"
       # - "LiteLLM Prompt Firewall Integration": "integrations/litellm-prompt-firewall-integration.md"
     - "API Security":
-      - "Overview": "getting-started/api-overview.md"
+      - "Overview": "integrations/api-overview.md"
       - "Traffic Connectors":
+        - "AWS API Gateway": "integrations/api-aws.md"
+        # - "Nginx Server": "integrations/api-nginx-server.md"
+        # - "Azure API Management": "getting-started/api-azure.md"
         - "Kubernetes":
-          - "Deploy SentryFlow": "getting-started/api-k8s.md"
-          - "Istio": "getting-started/api-istio.md"
-          - "Nginx": "getting-started/api-nginx.md"
+          - "API Sec Proxy": "integrations/api-k8s.md"
+          - "Istio": "integrations/api-istio.md"
+          - "Nginx Ingress": "integrations/api-nginx.md"
     - "CI/CD":
         - "Overview": "integrations/cicd-overview.md"
         - "Azure DevOps":
@@ -288,7 +286,6 @@ nav:
           - "Iac Scan": "integrations/azure-iac.md"
           - "DAST": "integrations/azure-dast.md"
           - "Secret Scan": "integrations/azure-secret-scan.md"
-          # - "OpenGrep SAST": "integrations/azure-opengrep-sast.md"
         - "Google Cloud Build":
           - "Overview": "integrations/google-overview.md"
           - "SAST": "integrations/google-sast.md"
@@ -387,12 +384,13 @@ nav:
       - "Rsyslog Feeder Integration" : "integrations/rsyslog_feeder_integration.md"
       - "AWS Cloudwatch" : "integrations/aws-cloudwatch.md"
     - "SSO":
+      - "Signup/Login via SSO": "how-to/sso.md"
       - "Azure Entra": "integrations/azure-entra-sso.md"
+      # - "Okta": "integrations/okta-sso.md"
     - "Notification":
       - "Slack": "integrations/slack.md"
       - "Email": "integrations/email.md"
       - "Webhook": "integrations/webhook-integration.md"
-    - "OAuth": "integrations/oauth.md"
     - "Email Backend" : "integrations/email-backend.md"
   - "Use-Cases":
     - "Use Cases": "use-cases/index.md"
@@ -403,6 +401,7 @@ nav:
       - "Vulnerability Management": "use-cases/vulnerability.md"
     - "CDR (Cloud Detection and Response)":
       - "Remediation": "getting-started/cdr-setup.md"
+    - "API Security": "use-cases/api-security.md"
     - "AI/ML Security":
       - "Use Cases": "use-cases/aiml-usecases.md"
       - "Categories and Probes": "use-cases/subprompts-categories.md"
@@ -491,6 +490,7 @@ nav:
         - "Reporting":
             - "OnDemand and Scheduled" : "use-cases/vm-reporting.md"
             - "Host Scan Report" : "use-cases/vm-host-scan-report.md"
+    - "Event Trail Logs": "getting-started/audit-trail-logs.md"
     - "Access Keys": "use-cases/access-keys.md"
     - "IoT/Edge Security" : "use-cases/iot-edge-security.md"
     - "5G Security" : "use-cases/5g-security.md"
@@ -511,7 +511,10 @@ nav:
 
   - "Resources":
     - "Resources": "resources/index.md"
+    - "Enterprise Architecture" : "getting-started/accuknox-arch.md"
     - "Deployment Models": "getting-started/deployment-models.md"
+    # - "AccuKnox Agents" : "getting-started/accuknox-agents.md"
+    # - "AI Usage Policy": "resources/ai-usage-policy.md"
     - "CWPP Troubleshooting": "resources/troubleshooting.md"
     - "CSPM Troubleshooting": "resources/cspm-troubleshooting.md"
     - "User Manual": "resources/accuknox-manual.md"

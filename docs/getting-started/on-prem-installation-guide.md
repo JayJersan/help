@@ -15,17 +15,6 @@ description: Step-by-step instructions for deploying AccuKnox's on-prem security
 | Trusted SSL Certificates [Optional]                          | SSL Certificates are used for AccuKnox Portal.                                                                                                  | If trusted certs are not provided, we can use self-signed certs.                                                                                                                                                                                                                                                                                                          |
 | Domain name entries [Mandatory]                              | AccuKnox Portal and its REST APIs are accessible using these domain names.                                                                      | Domain names to configure: <br> - app.accuknox.domain.com <br> - cspm.accuknox.domain.com <br> - cwpp.accuknox.domain.com <br> - reports.accuknox.domain.com                                                                                                                                                                                                              |
 
-## Hardware & Pre-Requisites
-
-### VM System Requirements
-
-All nodes are expected to make use of Debian 13 as their Operating System
-
-| Type   | Nodes | Each node vCPUs | Each Node RAM (GB) | Each node Disk (GB) |
-|--------|--------|------------------|---------------------|----------------------|
-| Master | 1      | 4                | 8                   | 256                  |
-| Worker | 2      | 8                | 16                  | 256                  |
-
 ## Container Registry
 
 A Harbor container registry will be deployed on the master node if not available.
