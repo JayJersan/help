@@ -513,6 +513,7 @@ nav:
     - "Resources": "resources/index.md"
     - "Enterprise Architecture" : "getting-started/accuknox-arch.md"
     - "Deployment Models": "getting-started/deployment-models.md"
+    - "Multi-Tenancy Support": "resources/multitenancy.md"
     # - "AccuKnox Agents" : "getting-started/accuknox-agents.md"
     # - "AI Usage Policy": "resources/ai-usage-policy.md"
     - "CWPP Troubleshooting": "resources/troubleshooting.md"
