@@ -40,6 +40,8 @@ Once the application is created, you will be redirected to the application's **G
 
     === "On-Premise Users"
         - You can directly input the configuration into your admin portal: [IDP Providers Configuration Page](https://cspm.accuknox.com/admin/accuknox_oidc_client/idpprovider/)
+        - Here is a sample configuration using your Okta details:
+        ![alt text](image-24.png)
 
 ## 3. Invite Okta Users to AccuKnox
 
