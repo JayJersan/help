@@ -6,6 +6,16 @@ hide:
 ---
 # ASPM (Application Security Posture Management)
 
+<style>
+  .nt-card-title{
+    text-align: center;
+  }
+
+  .nt-card-img img{
+    color: #00025;
+  }
+</style>
+
 ## Use Cases
 
 ::cards:: cols=4
