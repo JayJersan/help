@@ -38,8 +38,6 @@ The **AI Security** module provides prompt firewalling, threat detection, and ri
 
 ::/cards::
 
-!!! tip "**Support Matrix**"
-    Refer to the [AI Security Support Matrix](../support-matrix/aiml-security.md) for detailed information on supported platforms, versions, and configurations.
-
-!!! tip "**Use Cases**"
-    Refer to the [AI Security Use Case](../use-cases/ai-security.md) to learn how to view your AI inventory, create collections, upload OpenAI specifications, and scan for security findings.
+!!! tip "**Support Matrix and Use Cases**"
+    - Refer to the **[AI Security Support Matrix](../support-matrix/aiml-security.md)** for detailed information on supported platforms, versions, and configurations.
+    - Refer to the **[AI Security Use Case](../use-cases/ai-security.md)** to learn how to view your AI inventory, create collections, upload OpenAI specifications, and scan for security findings.
