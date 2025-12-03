@@ -404,7 +404,7 @@ nav:
       - "Remediation": "getting-started/cdr-setup.md"
     - "API Security": "use-cases/api-security.md"
     - "AI/ML Security":
-      - "Use Cases": "use-cases/aiml-usecases.md"
+      - "Overview": "use-cases/aiml-usecases.md"
       - "Prompt Firewall": "use-cases/prompt-firewall.md"
       - "MCP Server": "integrations/mcp-server.md"
       - "Jupyter Notebook": "use-cases/jupyter-notebook.md"
