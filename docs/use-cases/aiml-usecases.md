@@ -25,20 +25,29 @@ hide:
 <!-- TODO: Add the right icons here -->
 ::cards:: cols=3
 
-- title: AI-DR (Detection & Runtime Protection)
-  content: Detect and defend against AI-specific threats like prompt injection and model abuse with runtime visibility and enforcement.
+- title: Prompt Firewall
   image: ./icons/aidr.svg
-  url: https://help.accuknox.com/use-cases/llm-defense-app-onboard/
+  url: https://help.accuknox.com/use-cases/prompt-firewall/
+
+- title: MCP Server
+  image: ./icons/mcp-server.svg
+  url: https://help.accuknox.com/integrations/mcp-server/
+
+- title: Model, Data & Pipeline Safety
+  image: ./icons/model-safety.svg
+  url: https://help.accuknox.com/use-cases/model-safety/
 
 - title: Jupyter Notebook Security
-  content: Secure Jupyter Notebooks with access controls, activity monitoring, and data protection to prevent unauthorized access and data leaks.
   image: ./icons/jupyter.svg
   url: https://help.accuknox.com/use-cases/jupyter-notebook/
 
 - title: ModelArmor
-  content: Protect machine learning models from theft, adversarial attacks, and unauthorized access with encryption and usage monitoring.
   image: ./icons/modelarmor.svg
   url: https://help.accuknox.com/use-cases/modelarmor/
+
+- title: MCP Security (Coming Soon)
+  image: ./icons/mcp-security.svg
+  url:
 
 ::/cards::
 
