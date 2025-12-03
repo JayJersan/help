@@ -41,6 +41,8 @@ hide:
   image: ./icons/mcp-security.svg
   url:
 
+::/cards::
+
 ## Featured Videos
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: auto; font-family: Arial, sans-serif;">
 
