@@ -17,18 +17,9 @@ hide:
   }
 </style>
 
-AccuKnox delivers platformized AI/ML security solutions to safeguard machine learning models, data pipelines, and AI-driven workloads from evolving threats. By applying Zero Trust principles, AccuKnox ensures robust protection across cloud, on-premises, and hybrid environments. AI/ML systems face unique risks such as model theft, data privacy breaches, adversarial attacks, and compliance challenges. Securing these systems is critical to protect intellectual property, maintain data integrity, and meet regulatory requirements.
+## Red Teaming Against AI Models
 
-## Supported Platforms and Use Cases
-
-!!!note "Useful Links"
-    - For list of supported platforms refer to AccuKnox's [**AI/ML Support Matrix**](https://help.accuknox.com/support-matrix/aiml-support-matrix/)
-    - For use cases refer to the [**AI/ML Security Use Cases**](https://help.accuknox.com/use-cases/aiml-usecases/)
-
-## Onboarding AI/ML Assets from Cloud Providers
-Pick your cloud provider to get started with onboarding AI/ML assets:
-
-::cards:: cols=3
+::cards:: cols=4
 
 - title: AWS
   image: ./icons/aws-vm.svg
@@ -42,9 +33,26 @@ Pick your cloud provider to get started with onboarding AI/ML assets:
   image: ./icons/gcp-vm.svg
   url: /how-to/aiml-gcp-onboard/
 
+- title: On-Prem Models
+  image: ./icons/onprem.svg
+  url:
+
 ::/cards::
 
-<img src="https://i.ibb.co/wh0hknB2/ai-1.png)" alt="AI/ML Security" style="width:70%; max-width:600px;">
+## LLM Prompt Security
+
+::cards:: cols=4
+
+- title: Prompt Firewall Application
+  image: ./icons/AIML.svg
+  url: /use-cases/llm-defense-app-onboard/
+  ::/cards::
+
+## Supported Platforms and Use Cases
+
+!!!note "Useful Links"
+    - For list of supported platforms refer to AccuKnox's [**AI/ML Support Matrix**](https://help.accuknox.com/support-matrix/aiml-support-matrix/)
+    - For use cases refer to the [**AI/ML Security Use Cases**](https://help.accuknox.com/use-cases/aiml-usecases/)
 
 ## Featured Videos
 

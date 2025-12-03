@@ -6,6 +6,16 @@ hide:
 ---
 # ASPM (Application Security Posture Management)
 
+<style>
+  .nt-card-title{
+    text-align: center;
+  }
+
+  .nt-card-img img{
+    color: #00025;
+  }
+</style>
+
 ## Use Cases
 
 ::cards:: cols=4
@@ -52,7 +62,7 @@ hide:
 - title: Secrets in S3 Buckets & File Systems
   content:
   image: ./icons/access-keys.svg
-  url: https://help.accuknox.com/use-cases/hashicorp/
+  url: https://help.accuknox.com/use-cases/cloud/aws-storage/
 
 - title: Rules Engine & Automated Ticket Creation
   content:

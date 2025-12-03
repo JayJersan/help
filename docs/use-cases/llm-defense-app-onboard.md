@@ -5,8 +5,6 @@ description: Learn how to onboard your application with AccuKnox Prompt Firewall
 
 ## Steps to Get Started
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l_RCQosnNJk" frameborder="0" allowfullscreen></iframe>
-
 
 ### **1. Add Application**
 

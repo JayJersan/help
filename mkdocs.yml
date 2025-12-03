@@ -197,9 +197,10 @@ nav:
         - "Offboard Cloud Account": "how-to/cloud-offboarding.md"
     - "AI/ML Security (AI-SPM)":
       - "Overview": "how-to/aiml-overview.md"
-      - "AWS AI/ML Onboarding": "how-to/aiml-aws-onboard.md"
-      - "Azure AI/ML Onboarding": "how-to/aiml-azure-onboard.md"
-      - "GCP AI/ML Onboarding": "how-to/aiml-gcp-onboard.md"
+      - "Prompt Firewall Onboard": "use-cases/llm-defense-app-onboard.md"
+      - "AWS AI/ML Onboard": "how-to/aiml-aws-onboard.md"
+      - "Azure AI/ML Onboard": "how-to/aiml-azure-onboard.md"
+      - "GCP AI/ML Onboard": "how-to/aiml-gcp-onboard.md"
     - "Workload Security (CWPP)":
       - "Kubernetes":
         - "Onboarding Overview": "how-to/k8s-security-onboarding.md"
@@ -363,6 +364,7 @@ nav:
         - "AccuKnox": "integrations/nutanix-accuknox.md"
         - "KubeArmor": "integrations/nutanix-kubearmor.md"
       - "Spectro Cloud": "integrations/spectrocloud.md"
+    - "MCP Server": "integrations/mcp-server.md"
     - "Ticketing" :
       - "Ticket Templates" : "integrations/ticket-template.md"
       - "Jira Cloud" : "integrations/jira-cloud.md"
@@ -403,16 +405,15 @@ nav:
       - "Remediation": "getting-started/cdr-setup.md"
     - "API Security": "use-cases/api-security.md"
     - "AI/ML Security":
-      - "Use Cases": "use-cases/aiml-usecases.md"
-      - "Categories and Probes": "use-cases/subprompts-categories.md"
-      - "Runtime Security":
-        - "Onboard Prompt Firewall App": "use-cases/llm-defense-app-onboard.md"
+      - "Overview": "use-cases/aiml-usecases.md"
+      - "Prompt Firewall": "use-cases/prompt-firewall.md"
       - "Jupyter Notebook": "use-cases/jupyter-notebook.md"
       - "ModelArmor":
         - "Overview": "use-cases/modelarmor.md"
         - "Pickle Code Injection PoC": "use-cases/modelarmor-pickle-code.md"
         - "Adversarial Attacks on Deep Learning Models": "use-cases/modelarmor-adverserial-attacks.md"
         - "Deploy PyTorch App with ModelArmor": "use-cases/modelarmor-deploy-pytorch.md"
+      - "Categories and Probes": "use-cases/subprompts-categories.md"
     - "Cloud Security (CSPM)":
       - "Overview" : "use-cases/cspm.md"
       - "Asset Inventory": "use-cases/asset-inventory.md"
@@ -513,7 +514,8 @@ nav:
     - "Resources": "resources/index.md"
     - "Enterprise Architecture" : "getting-started/accuknox-arch.md"
     - "Deployment Models": "getting-started/deployment-models.md"
-    # - "Multi-Tenancy Support": "resources/multitenancy.md" # ADD THESE BACK IN LATER
+    - "Multi-Tenancy Support": "resources/multitenancy.md"
+    - "Asset Onboarding Deck": "https://docs.google.com/presentation/d/e/2PACX-1vSNns23fmwfVgaoBIvR1fL7fk_Be6GYUJLwRticjlm4cBvIAqzxm4IF7RV7qsV00KrrRFGDjOIVG0Q2/pub?start=false&loop=false&delayms=3000"
     # - "Data Usage Policy": "resources/data-usage-policy.md"  # ADD THESE BACK IN LATER
     # - "AccuKnox Agents" : "getting-started/accuknox-agents.md"
     # - "AI Usage Policy": "resources/ai-usage-policy.md"

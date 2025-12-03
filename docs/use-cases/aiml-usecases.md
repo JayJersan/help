@@ -23,22 +23,23 @@ hide:
     - For list of supported platforms refer to the [**AI/ML Security Support Matrix**](https://help.accuknox.com/support-matrix/aiml-support-matrix/)
 
 <!-- TODO: Add the right icons here -->
-::cards:: cols=3
+::cards:: cols=2
 
-- title: AI-DR (Detection & Runtime Protection)
-  content: Detect and defend against AI-specific threats like prompt injection and model abuse with runtime visibility and enforcement.
-  image: ./icons/aidr.svg
-  url: https://help.accuknox.com/use-cases/llm-defense-app-onboard/
+- title: Prompt Firewall
+  image: ./icons/AIML.svg
+  url: https://help.accuknox.com/use-cases/prompt-firewall/
 
 - title: Jupyter Notebook Security
-  content: Secure Jupyter Notebooks with access controls, activity monitoring, and data protection to prevent unauthorized access and data leaks.
   image: ./icons/jupyter.svg
   url: https://help.accuknox.com/use-cases/jupyter-notebook/
 
 - title: ModelArmor
-  content: Protect machine learning models from theft, adversarial attacks, and unauthorized access with encryption and usage monitoring.
   image: ./icons/modelarmor.svg
   url: https://help.accuknox.com/use-cases/modelarmor/
+
+- title: MCP Security
+  image: ./icons/mcp-security.svg
+  url:
 
 ::/cards::
 
