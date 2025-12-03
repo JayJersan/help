@@ -197,6 +197,7 @@ nav:
         - "Offboard Cloud Account": "how-to/cloud-offboarding.md"
     - "AI/ML Security (AI-SPM)":
       - "Overview": "how-to/aiml-overview.md"
+      - "Onboard Prompt Firewall": "use-cases/llm-defense-app-onboard.md"
       - "AWS AI/ML Onboarding": "how-to/aiml-aws-onboard.md"
       - "Azure AI/ML Onboarding": "how-to/aiml-azure-onboard.md"
       - "GCP AI/ML Onboarding": "how-to/aiml-gcp-onboard.md"
@@ -404,9 +405,8 @@ nav:
     - "API Security": "use-cases/api-security.md"
     - "AI/ML Security":
       - "Use Cases": "use-cases/aiml-usecases.md"
+      - "MCP Server": "integrations/mcp-server.md"
       - "Categories and Probes": "use-cases/subprompts-categories.md"
-      - "Runtime Security":
-        - "Onboard Prompt Firewall App": "use-cases/llm-defense-app-onboard.md"
       - "Jupyter Notebook": "use-cases/jupyter-notebook.md"
       - "ModelArmor":
         - "Overview": "use-cases/modelarmor.md"
@@ -513,8 +513,8 @@ nav:
     - "Resources": "resources/index.md"
     - "Enterprise Architecture" : "getting-started/accuknox-arch.md"
     - "Deployment Models": "getting-started/deployment-models.md"
+    - "Multi-Tenancy Support": "resources/multitenancy.md"
     - "Asset Onboarding Deck": "https://docs.google.com/presentation/d/e/2PACX-1vSNns23fmwfVgaoBIvR1fL7fk_Be6GYUJLwRticjlm4cBvIAqzxm4IF7RV7qsV00KrrRFGDjOIVG0Q2/pub?start=false&loop=false&delayms=3000"
-    # - "Multi-Tenancy Support": "resources/multitenancy.md" # ADD THESE BACK IN LATER
     # - "Data Usage Policy": "resources/data-usage-policy.md"  # ADD THESE BACK IN LATER
     # - "AccuKnox Agents" : "getting-started/accuknox-agents.md"
     # - "AI Usage Policy": "resources/ai-usage-policy.md"
