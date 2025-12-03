@@ -39,5 +39,5 @@ The **AI Security** module provides prompt firewalling, threat detection, and ri
 ::/cards::
 
 !!! tip "**Support Matrix and Use Cases**"
-    - Refer to the **[AI Security Support Matrix](../support-matrix/aiml-security.md)** for detailed information on supported platforms, versions, and configurations.
-    - Refer to the **[AI Security Use Case](../use-cases/ai-security.md)** to learn how to view your AI inventory, create collections, upload OpenAI specifications, and scan for security findings.
+    - Refer to the **[AI Security Support Matrix](https://help.accuknox.com/support-matrix/aiml-support-matrix/)** for detailed information on supported platforms, versions, and configurations.
+    - Refer to the **[AI Security Use Case](https://help.accuknox.com/use-cases/aiml-usecases/)** to learn how to view your AI inventory, create collections, upload OpenAI specifications, and scan for security findings.
