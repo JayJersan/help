@@ -23,7 +23,7 @@ hide:
     - For list of supported platforms refer to the [**AI/ML Security Support Matrix**](https://help.accuknox.com/support-matrix/aiml-support-matrix/)
 
 <!-- TODO: Add the right icons here -->
-::cards:: cols=3
+::cards:: cols=2
 
 - title: Prompt Firewall
   image: ./icons/AIML.svg
