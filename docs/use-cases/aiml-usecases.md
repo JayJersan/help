@@ -29,10 +29,6 @@ hide:
   image: ./icons/AIML.svg
   url: https://help.accuknox.com/use-cases/prompt-firewall/
 
-- title: MCP Server
-  image: ./icons/mcp-server.svg
-  url: https://help.accuknox.com/integrations/mcp-server/
-
 - title: Jupyter Notebook Security
   image: ./icons/jupyter.svg
   url: https://help.accuknox.com/use-cases/jupyter-notebook/
@@ -44,11 +40,6 @@ hide:
 - title: MCP Security
   image: ./icons/mcp-security.svg
   url:
-
-- title: Model, Data & Pipeline Safety
-  image: ./icons/model-safety.svg
-  url:
-::/cards::
 
 ## Featured Videos
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: auto; font-family: Arial, sans-serif;">

@@ -364,6 +364,7 @@ nav:
         - "AccuKnox": "integrations/nutanix-accuknox.md"
         - "KubeArmor": "integrations/nutanix-kubearmor.md"
       - "Spectro Cloud": "integrations/spectrocloud.md"
+    - "MCP Server": "integrations/mcp-server.md"
     - "Ticketing" :
       - "Ticket Templates" : "integrations/ticket-template.md"
       - "Jira Cloud" : "integrations/jira-cloud.md"
@@ -406,7 +407,6 @@ nav:
     - "AI/ML Security":
       - "Overview": "use-cases/aiml-usecases.md"
       - "Prompt Firewall": "use-cases/prompt-firewall.md"
-      - "MCP Server": "integrations/mcp-server.md"
       - "Jupyter Notebook": "use-cases/jupyter-notebook.md"
       - "ModelArmor":
         - "Overview": "use-cases/modelarmor.md"
