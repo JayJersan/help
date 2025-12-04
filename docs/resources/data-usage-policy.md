@@ -12,6 +12,11 @@ AccuKnox hosts and manages the security control plane.
 * **Residency**: Metadata, logs, and findings stored in AccuKnox cloud.
 * **Management**: AccuKnox handles maintenance and retention (default 60 days).
 * **Security**: Encrypted at rest and in transit.
+* **Deployment Regions**:
+    * **US**: `app.accuknox.com`
+    * **Europe**: `app.eu.accuknox.com`
+    * **Middle East**: `app.me.accuknox.com`
+    * **India**: `app.in.accuknox.com`
 
 ## For On-Prem Deployment
 
@@ -39,4 +44,4 @@ Only context required for analysis is sent:
 ### Governance
 
 * **Default**: Disabled.
-* **Activation**: Strict **Opt-In**. Contact **<support@accuknox.com>** to enable.
+* **Activation**: Strict **Opt-In**. Contact **<support@accuknox.com>** to enable AskAI features.
