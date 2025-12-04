@@ -12,6 +12,8 @@ This guide walks you through configuring input/output policies in AccuKnox for p
     * Monitoring and auditing AI interactions for compliance
     * Customizing security policies to fit your organization's needs
 
+    ![alt text](image-1.png)
+
 !!! warning "Pre-requisite"
     Add the **AccuKnox Prompt Firewall Proxy** to your app first.
     See: [Prompt Firewall App Onboarding](https://help.accuknox.com/use-cases/llm-defense-app-onboard/)
