@@ -5,6 +5,8 @@ description: Learn how to onboard your application with AccuKnox Prompt Firewall
 
 ## Steps to Get Started
 
+!!! info "Why Prompt Firewall?"
+    ![alt text](image-2.png)
 
 ### **1. Add Application**
 
