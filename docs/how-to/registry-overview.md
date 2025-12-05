@@ -22,31 +22,31 @@ AccuKnox supports onboarding and scanning of container images from various conta
 ::cards:: cols=4
 
 - title: Azure Container Registry (ACR)
-  image: ../integrations/cicd-icons/azure.png
+  image: ../support-matrix/registry-icons/acr.png
   url: /how-to/acr/
 - title: Elastic Container Registry (ECR)
-  image: ../integrations/cicd-icons/aws.png
+  image: ../support-matrix/registry-icons/ecr.png
   url: /how-to/ecr/
 - title: Google Artifact Registry (GAR)
-  image: ../integrations/cicd-icons/gcp.png
+  image: ../support-matrix/registry-icons/gar.png
   url: /how-to/gar/
 - title: Harbor Registry
-  image: ../integrations/cicd-icons/container.svg
+  image: ../support-matrix/registry-icons/harbor.png
   url: /how-to/harbor/
 - title: DockerHub Registry
-  image: ../integrations/cicd-icons/container.svg
+  image: ../support-matrix/registry-icons/docker.png
   url: /how-to/dockerhub/
 - title: Docker Trusted Registry
-  image: ../integrations/cicd-icons/container.svg
+  image: ../support-matrix/registry-icons/docker.png
   url: /how-to/docker-trusted/
 - title: Sonatype Nexus
-  image: ../integrations/cicd-icons/container.svg
+  image: ../support-matrix/registry-icons/nexus.png
   url: /how-to/sonatype-nexus/
 - title: JFrog Container Registry
-  image: ../integrations/cicd-icons/container.svg
+  image: ../support-matrix/registry-icons/jfrog.png
   url: /how-to/jfrog-container/
 - title: Quay Registry
-  image: ../integrations/cicd-icons/container.svg
+  image: ../support-matrix/registry-icons/quay.png
   url: /how-to/quay/
 - title: In-Cluster Scanner
   image: ../integrations/cicd-icons/container-image-scan.svg
