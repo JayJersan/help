@@ -15,7 +15,7 @@ hide:
 }
 </style>
 
-# Bamboo CI Integrations
+# Bamboo CI/CD Security Integrations
 
 ::cards:: cols=3
 
