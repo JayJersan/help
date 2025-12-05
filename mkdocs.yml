@@ -226,6 +226,7 @@ nav:
       - "Github IaC Scan": "how-to/github-iac-scan.md"
       - "AWS CDK IaC Scan": "how-to/aws-cdk-iac-scan.md"
     - "Container Registry":
+      - "Overview": "how-to/registry-overview.md"
       - "ACR": "how-to/acr.md"
       - "ECR": "how-to/ecr.md"
       - "GAR": "how-to/gar.md"
@@ -287,6 +288,13 @@ nav:
           - "Iac Scan": "integrations/azure-iac.md"
           - "DAST": "integrations/azure-dast.md"
           - "Secret Scan": "integrations/azure-secret-scan.md"
+        - "Bamboo CI":
+          - "Overview": "integrations/bamboo-overview.md"
+          - "SAST": "integrations/bamboo-sast.md"
+          - "Container Image Scan": "integrations/bamboo-container-scan.md"
+          - "IaC Scan": "integrations/bamboo-iac-scan.md"
+          - "DAST": "integrations/bamboo-dast.md"
+          - "Secret Scan": "integrations/bamboo-secret-scan.md"
         - "Google Cloud Build":
           - "Overview": "integrations/google-overview.md"
           - "SAST": "integrations/google-sast.md"

@@ -17,43 +17,16 @@ hide:
 
 # CI/CD Integrations Overview
 
-**CI/CD Support Matrix** provides a structured overview of supported capabilities and integration types across popular CI/CD platforms. This helps teams align their DevOps processes with available tools and identify the best fit for their workflows.
+The CI/CD Support Matrix summarizes integration capabilities and security features across major CI/CD platforms for streamlined DevOps workflows.
 
-Our approach to CI/CD pipeline integration is not just about connecting tools—it's about creating a unified, automated security fabric that protects your applications from code to cloud. We focus on three core pillars: proactive vulnerability prevention, real-time threat detection, and continuous supply chain hardening. By shifting security left, we ensure every stage of your development lifecycle is fortified against modern attacks.
-
-![image](https://i.ibb.co/cSX9f6VR/image.png)
-
-=== "Continuous API Security"
-    !!! tip ""
-        🚀 Instead of relying on infrequent manual penetration tests,
-        our solution integrates **DAST** into your CI/CD pipeline.
-
-        - Continuous, automated endpoint testing
-        - Real-time alerts for new flaws
-        - Prevents risks from frequent updates
-
-=== "Integrated SAST & Secrets Scanning"
-    !!! success ""
-        🔒 Enable dev teams to **scan code and configs inline** with PRs.
-
-        - Static Application Security Testing (SAST)
-        - Secrets & sensitive data detection
-        - Blocks merges until baseline is met
-
-=== "CI/CD Pipeline Hardening"
-    !!! warning ""
-        🛡️ Secure your software supply chain by **validating executions**.
-
-        - Monitors CI/CD for improper behavior
-        - Detects unauthorized execution paths
-        - Prevents hidden supply chain attacks
-
-
-::cards:: cols=5
+::cards:: cols=4
 
 - title: Azure DevOps
   image: ./cicd-icons/azure.png
   url: /integrations/azure-overview/
+- title: Bamboo CI
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQIU0fOwGQAo3Au8cCsOLeY18DOWWEdpj-1g&s
+  url: /integrations/bamboo-overview/
 - title: Google Cloud Build
   image: ./cicd-icons/gcp.png
   url: /integrations/google-overview/
@@ -82,3 +55,30 @@ Our approach to CI/CD pipeline integration is not just about connecting tools—
   image: ./cicd-icons/circleci.png
   url: /integrations/circleci-overview/
   ::/cards::
+
+![image](https://i.ibb.co/cSX9f6VR/image.png)
+
+=== "Continuous API Security"
+    !!! tip ""
+        🚀 Instead of relying on infrequent manual penetration tests,
+        our solution integrates **DAST** into your CI/CD pipeline.
+
+        - Continuous, automated endpoint testing
+        - Real-time alerts for new flaws
+        - Prevents risks from frequent updates
+
+=== "Integrated SAST & Secrets Scanning"
+    !!! success ""
+        🔒 Enable dev teams to **scan code and configs inline** with PRs.
+
+        - Static Application Security Testing (SAST)
+        - Secrets & sensitive data detection
+        - Blocks merges until baseline is met
+
+=== "CI/CD Pipeline Hardening"
+    !!! warning ""
+        🛡️ Secure your software supply chain by **validating executions**.
+
+        - Monitors CI/CD for improper behavior
+        - Detects unauthorized execution paths
+        - Prevents hidden supply chain attacks

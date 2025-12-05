@@ -28,7 +28,7 @@ hide:
   url: /how-to/aiml-overview/
 - title: Container Registry
   image: ./icons/container-reg.svg
-  url: /how-to/acr/
+  url: /how-to/registry-overview/
 - title: Open Source
   image: ./icons/open-source.svg
   url: /introduction/open-source-vs-enterprise/

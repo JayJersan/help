@@ -24,13 +24,18 @@ hide:
 
 </style>
 
-# CI/CD Support Matrix
+# CI/CD Security Support Matrix
+
+Get a quick overview of integration types and security features supported across major CI/CD platforms. Use this matrix to choose the best tools for your DevOps workflows and ensure robust security and compliance.
 
 ::cards:: cols=3
 
 - title: Azure DevOps
   image: ./cicd-icons/azure.png
   url: /integrations/azure-overview/
+- title: Bamboo CI
+  image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQIU0fOwGQAo3Au8cCsOLeY18DOWWEdpj-1g&s
+  url: /integrations/bamboo-overview/
 - title: Google Cloud Build
   image: ./cicd-icons/gcp.png
   url: /integrations/google-overview/
@@ -57,31 +62,20 @@ hide:
   url: /integrations/checkmarx/
   ::/cards::
 
-**CI/CD Support Matrix** provides a structured overview of supported capabilities and integration types across popular CI/CD platforms. This helps teams align their DevOps processes with available tools and identify the best fit for their workflows.
-
-This document outlines the integration mechanisms (workflow file, plugin, or native integration) and feature availability for key DevOps and security functionalities such as SAST, DAST, Infrastructure-as-Code (IaC) scanning, container security, secrets scanning, and pipeline monitoring.
-
-By understanding the support landscape for each CI/CD tool, teams can streamline their pipelines while ensuring compliance, security, and efficiency.
-
----
 
 ## **Integration Types**
 
 These are the three supported methods for integrating CI/CD tools with AccuKnox :-
 
-1. **Workflow File**:
+=== "Workflow File"
+    **Description**: A workflow file is a configuration file within the CI/CD tool where you define the steps of your build, test, and deploy pipeline. It allows you to automate tasks using specific syntax and structure (often YAML or JSON).
 
-   - **Description**: A workflow file is a configuration file within the CI/CD tool where you define the steps of your build, test, and deploy pipeline. It allows you to automate tasks using specific syntax and structure (often YAML or JSON).
+=== "Plugin Support"
+    **Description**: This method refers to using external plugins to extend the functionality of the CI/CD tool. Plugins integrate the tool with third-party services or features, such as code scanning, security checks, or deployment to cloud platforms.
 
-2. **Plugin Support**:
+=== "Native Integration"
+    **Description**: Native integration refers to the seamless, built-in capability of AccuKnox to directly connect with CI/CD tools and platforms, without the need for external plugins. This method utilizes the internal features of AccuKnox to interact with and manage security policies, scans, and assessments within the CI/CD pipeline.
 
-   - **Description**: This method refers to using external plugins to extend the functionality of the CI/CD tool. Plugins integrate the tool with third-party services or features, such as code scanning, security checks, or deployment to cloud platforms.
-
-3. **Native Integration**:
-
-   - **Description**: Native integration refers to the seamless, built-in capability of AccuKnox to directly connect with CI/CD tools and platforms, without the need for external plugins. This method utilizes the internal features of AccuKnox to interact with and manage security policies, scans, and assessments within the CI/CD pipeline.
-
----
 
 | CI/CD Tool                                                                                                                                            | Workflow file (Direct Steps) | Plugin Support |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------- |
