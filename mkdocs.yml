@@ -277,6 +277,8 @@ nav:
           - "API Sec Proxy": "integrations/api-k8s.md"
           - "Istio": "integrations/api-istio.md"
           - "Nginx Ingress": "integrations/api-nginx.md"
+    - "CDR":
+      - "Remediation": "getting-started/cdr-setup.md"
     - "CI/CD":
         - "Overview": "integrations/cicd-overview.md"
         - "Azure DevOps":
@@ -409,8 +411,7 @@ nav:
       - "EPSS Scoring": "use-cases/epss-scoring.md"
       - "Rules Engine": "use-cases/rules-engine-ticket-creation.md"
       - "Vulnerability Management": "use-cases/vulnerability.md"
-    - "CDR (Cloud Detection and Response)":
-      - "Remediation": "getting-started/cdr-setup.md"
+    - "CDR (Cloud Detection and Response)": "use-cases/cdr.md"
     - "API Security": "use-cases/api-security.md"
     - "AI/ML Security":
       - "Overview": "use-cases/aiml-usecases.md"

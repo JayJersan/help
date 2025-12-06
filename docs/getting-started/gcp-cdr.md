@@ -1,9 +1,9 @@
 ---
-title: AccuKnox CDR for GCP – Deployment & Setup Guide
+title: CDR for GCP Setup Guide
 description: Accuknox CDR documentation for GCP
 ---
 
-# AccuKnox CDR for GCP – Deployment & Setup Guide
+# CDR for GCP Setup Guide
 
 !!! note "Remediation Setup"
     For remediation setup for AWS, Azure and GCP CDR please refer to the following links:

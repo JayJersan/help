@@ -1,9 +1,9 @@
 ---
-title: AccuKnox CDR for AWS – Deployment & Setup Guide
+title: CDR for AWS Setup Guide
 description: Accuknox CDR for AWS documentation
 ---
 
-# AccuKnox CDR for AWS – Deployment & Setup Guide
+# CDR for AWS Setup Guide
 
 !!! note "Remediation Setup"
     For remediation setup for AWS, Azure and GCP CDR please refer to the following links:
