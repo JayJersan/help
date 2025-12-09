@@ -85,17 +85,14 @@ For Azure Onboarding it is required to register an App and giving Security read 
 
 Permissions for AI Asset Scanning (Azure):
 
-- **Create a role with built-in Reader permissions**
+- **Create a role with built-in permissions**
     - Assign the **Reader** role at the **subscription** or **resource group** level.
-    - Assign the Cognitive Services OpenAI Reader role at the **subscription** or **resource group** level.
+    - Assign the **Cognitive Services User** and **Cognitive Services OpenAI User** role at the **subscription** or **resource group** level.
 
 - **Create a custom role** with the following actions:
     - `Microsoft.MachineLearningServices/workspaces/onlineEndpoints/score/action`
-    - `Microsoft.MachineLearningServices/serverlessEndpoints/listKeys/action`
+    - `Microsoft.MachineLearningServices/workspaces/serverlessEndpoints/listKeys/action`
     - `Microsoft.MachineLearningServices/workspaces/listStorageAccountKeys/action`
     - `Microsoft.CognitiveServices/accounts/listKeys/action`
     - `Microsoft.CognitiveServices/accounts/deployments/read`
-    - `Microsoft.CognitiveServices/accounts/read`
-    - `Microsoft.CognitiveServices/accounts/projects/read`
-    - `Microsoft.CognitiveServices/accounts/projects/datasets/read`
 
