@@ -8,19 +8,90 @@ AccuKnox CSPM security tool scans images that are present in the onboarded [Azur
 
 ## **Steps to generate credentials for onboarding ACR**
 
-**Step 1:** Open the Azure Management Console and sign in with your Azure account credentials. Search for the **Container Registry** service in the search bar.
+The credentials for onboarding ACR can be created from either the Azure Portal or using the azure CLI tool:
 
-![image-20241217-061207.png](./images/acr/1.png)
+### **Via Azure Portal**
 
-**Step 2:** Click on the name of the registry to be onboarded. In the navigation menu for the container registry, click on **Access Keys** under the Settings section.
+**Step 1**: Create an App Registration
 
-![image-20241217-061226.png](./images/acr/2.png)
+Browse to **Entra ID** > **App registrations** and click on **New Registration**
 
-**Step 3:** Click on the **Admin User** checkbox to activate Admin access.
+![App Registration](./images/acr/1.png)
 
-![image-20241217-061243.png](./images/acr/3.png)
+Provide a Name for the App Registration and click on **Register** 
 
-Copy the generated **Login Server**, **Username,** and **Password** for onboarding on AccuKnox SaaS.
+![New App Registration](./images/acr/2.png)
+
+Copy the **Application (client) ID** after creation, this will be the username for connecting the registry with AccuKnox.
+
+![Application ID](./images/acr/3.png)
+
+**Step 2**: Create Client Secret
+
+1. Browse to **Entra ID** > **App registrations**, then select your application.
+2. Select **Certificates & secrets**.
+3. Select **Client secrets**, and then select **New client secret**.
+4. Provide a description of the secret, and a duration.
+5. Select **Add**.
+
+![Add Client Secret](./images/acr/4.png)
+
+Copy the **client secret value**, this is used as the password for connecting to the registry.
+
+**Step 3**: Assign Permissions
+
+Select the subscription where the ACR is present. 
+
+!!! note
+    If only one registry needs to be scanned, the Role Assignment can also be added in the IAM blade of the Container Registry resource instead of the subscription
+
+![Select Subscription](./images/acr/5.png)
+
+Navigate to IAM and select **Add role assignment**
+
+![Add Role Assignment](./images/acr/6.png)
+
+Select the **ACRPull role** and click on **Next**
+
+![Select ACRPull](./images/acr/7.png)
+
+Under Members, click on **Select Members** and **Select** the application registration that was created
+
+![Select Members](./images/acr/8.png)
+
+Click on **Next** and **Assign** the role.
+
+The Application (client) ID and the client secret value are used as the Username and Password respectively for onboarding registries on AccuKnox
+
+### **Via azure CLI**
+The following script can be used to create a service principal and assign it the acrpull permissions for a specific registry:
+
+```bash
+#!/bin/bash
+# This script requires Azure CLI version 2.25.0 or later. Check version with `az --version`.
+
+# Modify for your environment.
+# ACR_NAME: The name of your Azure Container Registry
+# SERVICE_PRINCIPAL_NAME: Must be unique within your AD tenant
+ACR_NAME=$containerRegistry
+SERVICE_PRINCIPAL_NAME=$servicePrincipal
+
+# Obtain the full registry ID
+ACR_REGISTRY_ID=$(az acr show --name $ACR_NAME --query "id" --output tsv)
+
+# Create the service principal with rights scoped to the registry.
+# acrpull:     pull only
+PASSWORD=$(az ad sp create-for-rbac --name $SERVICE_PRINCIPAL_NAME --scopes $ACR_REGISTRY_ID --role acrpull --query "password" --output tsv)
+USER_NAME=$(az ad sp list --display-name $SERVICE_PRINCIPAL_NAME --query "[].appId" --output tsv)
+
+# Output the service principal's credentials; use these in AccuKnox to authenticate
+echo "Service principal ID(User Name): $USER_NAME"
+echo "Service principal password: $PASSWORD"
+```
+!!! note
+    In the script, replace `$containerRegistry` with the registry name and `$servicePrincipal` with the name you would like to use for the Service Principal before execution.
+
+The output of the script provides the Username and Password to be used for connecting the registry with AccuKnox.
 
 ## **Steps to Onboard ACR Registry on AccuKnox**
 
@@ -30,7 +101,7 @@ Copy the generated **Login Server**, **Username,** and **Password** for onboardi
 
 Now, click on "**Add Registry"**
 
-![image-20241216-115621.png](./images/acr/4.png)
+![image-20241216-115621.png](./images/acr/9.png)
 
 **Step 2:** Enter any Registry Name and Description. Select Registry Type as ACR and paste the Login Server, Username, and Password that was copied.
 
@@ -40,7 +111,7 @@ Provide the **Tag pattern** and schedule a time( using the cron expression) for 
 
 Now, click on **Save**.
 
-![image-20241217-061809.png](./images/acr/5.png)
+![image-20241217-061809.png](./images/acr/10.png)
 
 ## Configure Advanced Settings
 
