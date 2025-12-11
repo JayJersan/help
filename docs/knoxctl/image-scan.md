@@ -16,14 +16,14 @@ Follow these steps to deploy the container image scanner:
 
 ### 1. Create a Label
 
-In the AccuKnox Control Plane, create a unique [**Label**](https://app.accuknox.com/settings/labels). This will be associated with the container image scan reports.
+In the AccuKnox Control Plane, create a unique [**Label**](./../how-to/how-to-create-labels.md). This will be associated with the container image scan reports.
 
 ### 2. Generate a Token
 
 From the AccuKnox Control Plane:
 
-- Generate an [**Artifact Token**](https://app.accuknox.com/settings/tokens)
-- Note down both the **Token** and your **Tenant ID**
+- Generate an [**Artifact Token**](./../how-to/how-to-create-tokens.md)
+- Note the **Token**
 
 ### 3. Scan your machine
 
@@ -32,7 +32,7 @@ Use the following command to scan your machine:
 ```bash
 knoxctl image-scan --artifactEndpoint="<url>" \
     --token="<authToken>" \
-    --label="<label>" \
+    --label="<label>"
 ```
 
 Replace the parameters (`<authToken>`, `<url>` and `<label>`) with the appropriate values.
@@ -61,7 +61,7 @@ Wants=accuknox-container-scan.timer
 
 [Service]
 Type=oneshot
-ExecStart=/bin/knoxctl image-scan --artifactEndpoint="$AK_URL" --token="$AK_TOKEN" --label="$AK_LABEL"
+ExecStart=/usr/local/bin/knoxctl image-scan --artifactEndpoint="$AK_URL" --token="$AK_TOKEN" --label="$AK_LABEL"
 MemoryHigh=1800M
 MemoryMax=2G
 KillMode=control-group
@@ -119,8 +119,8 @@ Once the scan is completed, results will be visible in the [**Findings**](https:
   ```sh
   sudo systemctl status <service_name> # e.g., kubearmor, vm-adapter
 
-  sudo systemctl status kubearmor
-  sudo systemctl status vm-adapter
+  sudo systemctl status accuknox-container-scan
+  sudo systemctl status accuknox-container-scan.timer
   ```
 
 - List all running services:
